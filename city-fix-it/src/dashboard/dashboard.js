@@ -6,7 +6,7 @@ class Dashboard extends Component {
     return (
       <div className='dashboard'>
         <div className='dash-grid'> 
-          <div className='dash'>
+          <div className='dash-menu'>
             <header className='dash-header'>Dashboard</header>
             <div className ='dash-menu-items'>
             <ul>Create Ticket</ul>
