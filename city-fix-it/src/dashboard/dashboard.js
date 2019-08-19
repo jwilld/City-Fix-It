@@ -1,14 +1,18 @@
 import React, { Component } from "react";
+import './dashboard.css'
 
 class Dashboard extends Component {
   render() {
     return (
       <div className='dashboard'>
-        <div>
-          <div>
-            <header>Dashboard</header>
+        <div className='dash-grid'> 
+          <div className='dash'>
+            <header className='dash-header'>Dashboard</header>
+            <div className ='dash-menu-items'>
             <ul>Create Ticket</ul>
             <ul>View Tickets</ul>
+
+            </div>
           </div>
         </div>
       </div>
