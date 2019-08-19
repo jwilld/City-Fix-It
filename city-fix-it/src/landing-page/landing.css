@@ -1,6 +1,16 @@
+.landing-container{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://images.unsplash.com/31/8jLdwLg6TLKIQfJcZgDb_Freedom_5.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2722&q=80);
+    background-size: cover;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+}
+
 .title {
-    grid-row: 4;
-    grid-column: 4;
+    grid-row: 2;
+    grid-column: 2;
     display: block;
     text-align: center;
     width: 50vw;
