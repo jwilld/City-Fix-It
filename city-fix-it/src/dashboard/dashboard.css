@@ -19,12 +19,14 @@
 
 }
 
-.dash-menu-items ul{
+.dash-link{
     transition: 1s;
+    text-decoration:none;
+    color: white;
     
 }
 
-.dash-menu-items ul:hover{
+.dash-link:hover{
     transition: .5s;
     color: rgba(45, 48, 57, 0.126);
     
