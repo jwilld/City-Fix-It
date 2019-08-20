@@ -1,7 +1,6 @@
 .dash-grid{
     display: grid;
     grid-template-rows: 1fr,5fr;
-    height: 100vh;
 }
 
 .dash-menu{
