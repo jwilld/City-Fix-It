@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./main.css";
 import Dashboard from "../dashboard/dashboard";
+import CreateTicket from "../create-ticket/Create-Ticket"
 
 class Main extends Component {
   render() {
@@ -12,6 +13,8 @@ class Main extends Component {
         <div className="dash" />
         <div className="main-content">
           <Dashboard />
+          <CreateTicket/>
+
         </div>
       </div>
     );
