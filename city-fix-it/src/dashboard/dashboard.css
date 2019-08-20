@@ -5,10 +5,11 @@
 }
 
 .dash-menu{
+    height: 10em;
     background-color: rgb(45, 48, 57);
     display: inline-block;
     color: rgb(255, 255, 255);
-    font-size: 5vh;
+    font-size: 2em;
     font-weight: bold;
     box-shadow:  0 10px 6px -4px black;
     text-align: center;
@@ -16,6 +17,7 @@
     text-shadow: 0.1vh 0.2vh 0.1vh lightgray,
     0.5vh 0.8vh 0.6vh rgba(16, 16, 16, 0.4),
     0.6vh 0.9vh 0.8vh rgba(16, 16, 16, 0.4);
+
 }
 
 .dash-menu-items ul{
@@ -33,3 +35,4 @@
     padding-bottom: 2vh;
     
 }
+

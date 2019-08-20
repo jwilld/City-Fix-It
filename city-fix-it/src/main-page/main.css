@@ -17,7 +17,7 @@
 }
 
 .main-header-text {
-  font-size: 7vh;
+  font-size: 4vh;
   color: white;
   font-weight: bold;
   padding-left: 10vh;
@@ -38,7 +38,7 @@
   grid-row: 2;
 }
 .create-form{
-  grid-row: 2/4;
+  grid-row: 2;
   grid-column: 2/4;
   display: flex;
   justify-content: center;
