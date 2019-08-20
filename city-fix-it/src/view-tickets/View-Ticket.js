@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import "./view-ticket.css"
 
 class ViewTicket extends Component {
     render() {
