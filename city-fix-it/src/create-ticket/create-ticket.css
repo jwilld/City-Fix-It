@@ -1,4 +1,8 @@
 .form-label{
     text-align: center;
-    font-size: 20vh;
+    font-size: 15vh;
+    /* color: blue; */
+    -webkit-text-size-adjust: auto;
 }
+
+
