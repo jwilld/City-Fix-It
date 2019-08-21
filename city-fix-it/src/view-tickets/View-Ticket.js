@@ -39,7 +39,7 @@ class ViewTicket extends Component {
           <button className="routine-button">Routine</button>
         </Link>
         <div>
-          <Route path="/main/view/urgent" component={TicketList} />
+          <Route path="/main/view/urgent" render={() => <TicketList status={this.state.urgentArray} />} />
           <Route path="/main/view/routine" component={TicketList} />
         </div>
       </div>
