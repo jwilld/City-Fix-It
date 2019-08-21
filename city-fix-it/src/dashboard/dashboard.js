@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import './dashboard.css'
+import {Link} from 'react-router-dom'
+
 
 class Dashboard extends Component {
   render() {
@@ -9,8 +11,17 @@ class Dashboard extends Component {
           <div className='dash-menu'>
             <header className='dash-header'>Dashboard</header>
             <div className ='dash-menu-items'>
-            <ul>Create Ticket</ul>
+              <Link className = 'dash-link' to='/main/view/'>
             <ul>View Tickets</ul>
+
+              </Link>
+              <Link className = 'dash-link' to='/main/create/'>
+
+            <ul>Create Ticket</ul>
+              </Link>
+
+          
+
 
             </div>
           </div>
