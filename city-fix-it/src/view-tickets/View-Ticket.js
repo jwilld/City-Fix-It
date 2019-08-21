@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import "./view-ticket.css"
+import MapAll from "../maps/MapAll"
+
 
 class ViewTicket extends Component {
     render() {
@@ -11,6 +13,7 @@ class ViewTicket extends Component {
                 <button 
                 className="routine-button"
                 onClick={this.props.handleClick}>Routine</button>
+                <MapAll/>
             </div>
         )
     }
