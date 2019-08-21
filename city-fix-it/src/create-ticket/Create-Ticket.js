@@ -20,12 +20,14 @@ class CreateTicket extends Component {
     let form = new FormData(event.target)
     let newTicket = {}
     let keys = Object.keys(this.state)
-    keys.forEach(key => (newTicket[key] = form.get(key)));
+    keys.forEach(key => JSON.stringify((newTicket[key] = form.get(key))))
     console.log(newTicket)
-    const url = 'https://city-fix-it.herokuapp.com/tickets'
-    axios.post(url).then(response =>{
-      console.log(response.data)
+    const url = 'https://city-fix-it.herokuapp.com/tickets/create'
+    axios.post(url, {
+      newTicket
+
     })
+    .then( response => console.log(response))
   }
 
 
