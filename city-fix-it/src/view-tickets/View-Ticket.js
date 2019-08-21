@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./view-ticket.css";
 import { Route, Link } from "react-router-dom";
 import TicketList from "../view-tickets/Urgent-List";
+import FormChange from "../form-change/Form-Change"
 import axios from "axios";
 import RoutineList from "../view-tickets/Routine-List";
 
@@ -40,6 +41,8 @@ class ViewTicket extends Component {
           </Link>
         </div>
         <div className="ticket-view-grid">
+          <Route path="/main/view/urgent/edit"
+          render={() => <FormChange/>}/>
           <Route
             path="/main/view/urgent"
             render={() => <TicketList status={this.state.urgentArray} />}

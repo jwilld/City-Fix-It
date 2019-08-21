@@ -1,7 +1,7 @@
 .urgent-item {
   justify-content: space-between;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   text-align: center;
 }
 .urgent-list{
@@ -12,14 +12,27 @@
 .display{
      border: 1px solid black;
 }
-.address {
-  grid-column: 1;
+.edit-link{
+  text-decoration: none;
+  color: black;
+  background-color: green;
+  transition: 1s;
+}
+.edit-link:hover{
+  background-color: white;
+  transition: 1s;
 }
 .type {
   grid-column: 2;
 }
 .priority {
   grid-column: 3;
+}
+.edit{
+  grid-column: 1;
+}
+.status{
+  grid-column: 4;
 }
 .urgent-scroll {
   height: 20vh;
