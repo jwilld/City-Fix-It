@@ -80,10 +80,17 @@
   
 } */
 
-/* h1 {
-  color: blue;
-  display: flex;
-  margin-top: 3em;
-  margin-left: -9.5em;
-} */
+h1 {
+  margin-left: 9vh;
+  /* background-color: blue; */
+}
 
+.urgent-scroll {
+  /* background-color: blue; */
+  margin-left: 15vh;
+}
+
+.routine-scroll {
+  /* background-color: blue; */
+  margin-left: 15vh;
+}

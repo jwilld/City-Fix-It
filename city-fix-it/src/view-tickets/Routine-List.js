@@ -11,7 +11,9 @@ class RoutineList extends Component {
         return (
             <div className="routine-list">
                 <h1>Routine Tickets</h1>
+                <div className="routine-scroll">
                 {routineList}
+                </div>
             </div>
         )
     }
