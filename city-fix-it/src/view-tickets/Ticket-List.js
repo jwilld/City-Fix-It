@@ -4,7 +4,7 @@ class TicketList extends Component {
     render() {
         let urgentList = this.props.status.map(stat =>(
             <div>
-                <ul>{stat.Priority}</ul>
+                <ul>{stat.priority}</ul>
             </div>
         ))
         return (

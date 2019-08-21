@@ -18,10 +18,10 @@ class ViewTicket extends Component {
     const url = "https://city-fix-it.herokuapp.com/tickets";
     axios.get(url).then((response, urgent, routine) => {
       return (
-        (urgent = response.data.filter(ticket => ticket.Priority === "Urgent")),
+        (urgent = response.data.filter(ticket => ticket.priority === "Urgent")),
         this.setState({ urgentArray: urgent }),
         (routine = response.data.filter(
-          ticket => ticket.Priority === "Routine"
+          ticket => ticket.priority === "Routine"
         )),
         this.setState({ routineArray: routine })
       );

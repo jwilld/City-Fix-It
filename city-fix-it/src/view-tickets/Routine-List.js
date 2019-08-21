@@ -4,7 +4,7 @@ class RoutineList extends Component {
     render() {
         let routineList = this.props.status.map(stat => (
             <div>
-                <ul>{stat.Priority}</ul>
+                <ul>{stat.priority}</ul>
             </div>
         ))
         return (

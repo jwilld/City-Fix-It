@@ -7,9 +7,9 @@ class CreateTicket extends Component {
   constructor(){
     super()
     this.state = {
-      Type:'',
-      Priority:'',
-      Description:'',
+      type:'',
+      priority:'',
+      description:'',
     }
   }
   
