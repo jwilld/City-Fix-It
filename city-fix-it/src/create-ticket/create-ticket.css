@@ -31,10 +31,13 @@
     color: white;
     font-weight: bold;
     font-size: 1em;
+    transition: 1s;
 }
 
-.form-submit{
-    
+.form-submit:hover{
+    background-color: white;
+    color: rgb(45,48,56);
+    transition: 1s;
 }
 
 input{
