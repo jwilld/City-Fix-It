@@ -3,6 +3,7 @@ import "./main.css";
 import Dashboard from "../dashboard/dashboard";
 import CreateTicket from "../create-ticket/Create-Ticket"
 import ViewTicket from "../view-tickets/View-Ticket"
+
 import {Route,Link} from 'react-router-dom'
 
 class Main extends Component {
@@ -15,9 +16,10 @@ class Main extends Component {
         <div className="dash" />
         
         <div className="main-content">
-          <Route exact path='/main/view' component ={ViewTicket}/>
+          <Route  path='/main/view' component ={ViewTicket}/>
           <Route path='/main/create' component ={CreateTicket}/>
           <Dashboard />
+
         </div>
       </div>
     );
