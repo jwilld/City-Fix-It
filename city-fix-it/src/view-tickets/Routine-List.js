@@ -1,10 +1,11 @@
 import React, { Component } from "react"
+import './routine-list.css'
 
 class RoutineList extends Component {
     render() {
         let routineList = this.props.status.map(stat => (
             <div>
-                <ul>{stat.priority}</ul>
+                <ul className='routine-item'>{stat.priority}</ul>
             </div>
         ))
         return (
