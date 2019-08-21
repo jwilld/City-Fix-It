@@ -9,7 +9,15 @@
     display: inline-flex;
 }
 .ticket-view-grid{
-    grid-column: 2;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+
+
+}
+.urgent-list{
+    grid-column: 1;
+    grid-row: 2;
 }
 
 .view{

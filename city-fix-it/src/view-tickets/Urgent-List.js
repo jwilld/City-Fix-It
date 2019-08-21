@@ -7,7 +7,6 @@ class TicketList extends Component {
       <div>
         <div className='list-item-grid'>
           <div className ='urgent-item'>
-
           <div className='address display'>{stat.address.street}</div>
           <div className='type display'>{stat.type}</div>
           <div className='priority display '>{stat.priority}</div>

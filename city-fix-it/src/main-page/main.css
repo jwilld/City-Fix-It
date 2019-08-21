@@ -49,9 +49,8 @@
 
 .two-buttons {
   display: inline-flex;
-  padding: 5em;
   justify-content: space-between;
-  margin-left: 10em;
+  text-align: center;
 }
 
 .urgent-button {
@@ -83,12 +82,6 @@
 h1 {
   margin-left: 9vh;
   /* background-color: blue; */
-}
-
-.urgent-scroll {
-  /* background-color: blue; */
-  margin-left: 1vh;
-  border: solid black;
 }
 
 .routine-scroll {
