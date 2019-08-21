@@ -45,17 +45,7 @@
 
 
 }
-/* nothing */
 
-/* .two-buttons {
-  grid-row: 2;
-  grid-column: 2;
-  height: 20em;
-  width: 20em;
-  box-shadow: 0 10px 20px -4px;
-  display: inline-block;
-  color: red;
-} */
 
 .two-buttons {
   display: inline-flex;

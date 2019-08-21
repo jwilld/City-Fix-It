@@ -34,12 +34,12 @@ class CreateTicket extends Component {
       name === 'Description' ?
       <div>
         <span>{name}</span>
-        <textarea  className= 'textarea-box input' type="text" name={name}></textarea>
+        <textarea  className= 'textarea-box input ' type="text" name={name}></textarea>
       </div>
       :
       <div>
         <span>{name}</span>
-        <input className='input' type="text" name={name}/>
+        <input  className= 'input'type="text" name={name}/>
       </div>
     ))
     return (
