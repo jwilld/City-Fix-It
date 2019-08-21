@@ -14,9 +14,9 @@ class Main extends Component {
           <header className="main-header-text">City Fix-It</header>
         </div>
         <div className="dash" />
-        
+
         <div className="main-content">
-          <Route  path='/main/view' component ={ViewTicket}/>
+          <Route path='/main/view' component ={ViewTicket}/>
           <Route path='/main/create' component ={CreateTicket}/>
           <Dashboard />
 
