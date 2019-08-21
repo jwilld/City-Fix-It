@@ -1,8 +1,27 @@
-.urgent-item{
-    /* box-shadow: 0 10px 20px -4px; */
+.urgent-item {
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
 }
-.urgent-scroll{
-    height: 20vh;
-    overflow:hidden; 
-    overflow-y:scroll;
+.display{
+     border: 1px solid black;
+}
+.address {
+  grid-column: 1;
+}
+.type {
+  grid-column: 2;
+}
+.priority {
+  grid-column: 3;
+}
+.urgent-scroll {
+  height: 20vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.urgent-scroll {
+  margin-left: 1vh;
+  border: solid black;
 }

@@ -87,10 +87,12 @@ h1 {
 
 .urgent-scroll {
   /* background-color: blue; */
-  margin-left: 15vh;
+  margin-left: 1vh;
+  border: solid black;
 }
 
 .routine-scroll {
   /* background-color: blue; */
   margin-left: 15vh;
+  border: solid black;
 }
