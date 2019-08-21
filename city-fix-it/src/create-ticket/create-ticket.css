@@ -32,6 +32,8 @@
     font-weight: bold;
     font-size: 1em;
     transition: 1s;
+    border: none;
+    border-radius: 20px;
 }
 
 .form-submit:hover{
@@ -40,13 +42,18 @@
     transition: 1s;
 }
 
-input{
+.input{
     display: block;
     width: 20em;
     border: none;
     box-shadow: 0 10px 20px -4px;
     height: 1.5em;
 }
+
+.textarea-box{
+    height: 5vh;
+}
+
 
 
 /* nothing */

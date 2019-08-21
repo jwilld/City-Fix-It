@@ -10,7 +10,6 @@ class CreateTicket extends Component {
       Type:'',
       Priority:'',
       Description:'',
-      Status:'',
     }
   }
   
@@ -30,11 +29,17 @@ class CreateTicket extends Component {
   render() {
     let keys = Object.keys(this.state)
 
-    let headers = ['Address','Type','Priority','Description','Status']
+    let headers = ['Address','Type','Priority','Description']
     let createForm = headers.map(name =>(
+      name === 'Description' ?
       <div>
         <span>{name}</span>
-        <input type="text" name={name}/>
+        <textarea  className= 'textarea-box input' type="text" name={name}></textarea>
+      </div>
+      :
+      <div>
+        <span>{name}</span>
+        <input className='input' type="text" name={name}/>
       </div>
     ))
     return (
