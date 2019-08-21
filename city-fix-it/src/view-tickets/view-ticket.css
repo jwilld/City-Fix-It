@@ -9,11 +9,11 @@
 } */
 
 .urgent-button {
-background-color: white;
-border: solid black;
-box-shadow: 0 10px 20px -4px;
-border-radius: 15px;
-font-weight: bold;
+    background-color: white;
+    border: solid black;
+    box-shadow: 0 10px 20px -4px;
+    border-radius: 15px;
+    font-weight: bold;
 }
 
 .routine-button {
