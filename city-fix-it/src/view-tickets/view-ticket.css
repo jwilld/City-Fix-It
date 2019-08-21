@@ -1,25 +1,28 @@
-/* .two-buttons {
+.two-buttons {
     display: grid;
-    grid-row: 2;
-    grid-column: 2;
-    height: 10em;
-    width: 10em;
-    box-shadow: 0 10px 20px -4px;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     display: inline-block;
-} */
-
-.urgent-button {
-    background-color: white;
-    border: solid black;
-    box-shadow: 0 10px 20px -4px;
-    border-radius: 15px;
-    font-weight: bold;
 }
 
-.routine-button {
+.link-grid{
+    display: inline-flex;
+}
+.ticket-view-grid{
+    grid-column: 2;
+}
+
+.view{
     background-color: white;
     box-shadow: 0 10px 20px -4px;
     border: solid black;
     border-radius: 15px;
     font-weight: bold;
+
 }
+
+.link{
+    text-decoration: none;
+}
+
+

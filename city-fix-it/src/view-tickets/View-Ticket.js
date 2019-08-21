@@ -3,6 +3,7 @@ import "./view-ticket.css";
 import { Route, Link } from "react-router-dom";
 import TicketList from "../view-tickets/Ticket-List";
 import axios from "axios";
+import RoutineList from "../view-tickets/Routine-List";
 
 class ViewTicket extends Component {
   constructor() {
@@ -32,15 +33,17 @@ class ViewTicket extends Component {
 
     return (
       <div className="two-buttons">
-        <Link to="/main/view/urgent">
-          <button className="urgent-button">Urgent</button>
+        <div className='link-grid'> 
+        <Link to="/main/view/urgent" className ='link'>
+          <button className="urgent-button view">Urgent</button>
         </Link>
-        <Link to="/main/view/routine">
-          <button className="routine-button">Routine</button>
+        <Link to="/main/view/routine" className ='link'>
+          <button className="routine-button view">Routine</button>
         </Link>
-        <div>
+        </div>
+        <div className='ticket-view-grid'>
           <Route path="/main/view/urgent" render={() => <TicketList status={this.state.urgentArray} />} />
-          <Route path="/main/view/routine" component={TicketList} />
+          <Route path="/main/view/routine" render={() => <RoutineList status={this.state.routineArray} />} />
         </div>
       </div>
     );

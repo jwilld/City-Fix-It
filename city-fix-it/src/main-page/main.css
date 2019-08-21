@@ -45,7 +45,6 @@
 
 
 }
-/* nothing */
 
 /* .two-buttons {
   grid-row: 2;
@@ -58,7 +57,10 @@
 } */
 
 .two-buttons {
-  display: grid;
+  display: inline-flex;
+  padding: 5em;
+  justify-content: space-between;
+  margin-left: 10em;
 }
 
 .urgent-button {
@@ -77,5 +79,20 @@
   justify-content: center;
   width: 10em;
   height: 5em;
-
 }
+
+/* .urgent-list {
+  display: block;
+  color: blue;
+  margin-top: 5em;
+  margin-left: -3em;
+  
+} */
+
+/* h1 {
+  color: blue;
+  display: flex;
+  margin-top: 3em;
+  margin-left: -9.5em;
+} */
+

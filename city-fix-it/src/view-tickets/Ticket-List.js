@@ -1,7 +1,6 @@
 import React, { Component } from "react"
-import { getPriority } from "os";
 
-class TicketList extends Component {
+class TicketList extends Component { 
     render() {
         let urgentList = this.props.status.map(stat =>(
             <div>
@@ -9,12 +8,12 @@ class TicketList extends Component {
             </div>
         ))
         return (
-            <div >
-            <h1>urgent tickets</h1>
+            <div className="urgent-list">
+            <h1>Urgent Tickets</h1>
                 {urgentList}
             </div>
         )
     }
 }
 
-export default TicketList;
+export default TicketList; 
