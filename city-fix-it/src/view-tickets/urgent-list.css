@@ -1,0 +1,8 @@
+.urgent-item{
+    box-shadow: 0 10px 20px -4px;
+}
+.urgent-scroll{
+    height: 20vh;
+    overflow:hidden; 
+    overflow-y:scroll;
+}
