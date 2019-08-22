@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./ticket-search.css";
 import axios from "axios";
-import { Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
+import TicketShow from '../ticket-show/TicketShow'
 
 class TicketSearch extends Component {
   constructor() {
@@ -9,9 +10,6 @@ class TicketSearch extends Component {
     this.state = {
       tickets: []
     };
-  }
-  typeSearch = event => {
-    this.setState({ current: event.target.value.toLowerCase() })
   }
 
   componentDidMount = () => {
@@ -22,36 +20,37 @@ class TicketSearch extends Component {
   };
 
   render() {
-    console.log(this.state.tickets);
-    let ticketList = this.state.tickets.map(ticket => (
-      <div>
+    // console.log(this.state.tickets);
+    let ticketList = this.state.tickets.map((ticket, i) => (
+      <div key={i}>
         <div className="list-item-grid">
       
-          <div className="urgent-item">
-            <Link to='/main/view/urgent/edit'class='edit-link'>
-            <div className='edit display'>Edit</div>
+          <div className="ticket-item">
+            <Link className='edit-link display-list' to={{ pathname:'/main/ticket-search/'+ ticket._id,
+            state:{ticketInfo:ticket} }}>
+            <div className='edit '>Edit</div>
             </Link>
-            {/* <div className="address display">{ticket.address}</div> */}
-            <div className="type display">{ticket.type}</div>
-            <div className="priority display ">{ticket.priority}</div>
-            <div className="status display">{ticket.status}</div>
+            <div className="type display-list">{ticket.type}</div>
+            <div className="priority display-list  ">{ticket.priority}</div>
+            <div className="status display-list">{ticket.status}</div>
+            <div className="add display-list ">{ticket.address}</div>
           </div>
         </div>
       </div>
     ));
     return (
       <div className="ticket-search">
-        <div>
+        <div className='search-container'>
           <input
             className="search-box"
             type="text"
             placeholder="Search for a ticket"
-            onChange={this.typeSearch}
           />
         </div>
-        <div>
+        <div className='ticket-scroll'>
           {ticketList}
         </div>
+        <Route path='/main/ticket-search/:id' component={TicketShow}/>
       </div>
     );
   }

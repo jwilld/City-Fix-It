@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import "./main.css";
 import Dashboard from "../dashboard/dashboard";
 import CreateTicket from "../create-ticket/Create-Ticket"
-import ViewTicket from "../view-tickets/View-Ticket"
 import TicketSearch from "../ticket-search/ticket-search"
 
-import {Route,Link} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 
 class Main extends Component {
   render() {

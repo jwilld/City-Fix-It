@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
-import {Route, Link} from 'react-router-dom'
+import {Route } from 'react-router-dom'
 import Landing from './landing-page/landing'
 import Main  from './main-page/main'
-import ViewTicket from './view-tickets/View-Ticket'
 
 function App() {
   return (

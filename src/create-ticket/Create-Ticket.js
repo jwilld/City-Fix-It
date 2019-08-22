@@ -28,7 +28,6 @@ class CreateTicket extends Component {
 
 
   render() {
-    let keys = Object.keys(this.state)
 
     let headers = ['Address','Type','Priority','Description']
     let createForm = headers.map(name =>(
