@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./ticket-search.css";
 import axios from "axios";
-import { Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
+import TicketShow from '../ticket-show/TicketShow'
 
 class TicketSearch extends Component {
   constructor() {
@@ -19,13 +20,14 @@ class TicketSearch extends Component {
   };
 
   render() {
-    console.log(this.state.tickets);
+    // console.log(this.state.tickets);
     let ticketList = this.state.tickets.map(ticket => (
       <div>
         <div className="list-item-grid">
       
           <div className="ticket-item">
-            <Link to={'/main/ticket-search/'+ ticket._id}class='edit-link display-list'>
+            <Link className='edit-link display-list' to={{ pathname:'/main/ticket-search/'+ ticket._id,
+            state:{ticketInfo:ticket} }}>
             <div className='edit '>Edit</div>
             </Link>
             <div className="type display-list">{ticket.type}</div>
@@ -48,6 +50,7 @@ class TicketSearch extends Component {
         <div className='ticket-scroll'>
           {ticketList}
         </div>
+        <Route path='/main/ticket-search/:id' component={TicketShow}/>
       </div>
     );
   }
