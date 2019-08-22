@@ -25,7 +25,7 @@ class TicketSearch extends Component {
         <div className="list-item-grid">
       
           <div className="ticket-item">
-            <Link to='/'class='edit-link display-list'>
+            <Link to={'/main/ticket-search/'+ ticket._id}class='edit-link display-list'>
             <div className='edit '>Edit</div>
             </Link>
             <div className="type display-list">{ticket.type}</div>
