@@ -24,27 +24,28 @@ class TicketSearch extends Component {
       <div>
         <div className="list-item-grid">
       
-          <div className="urgent-item">
-            <Link to='/main/view/urgent/edit'class='edit-link'>
-            <div className='edit display'>Edit</div>
+          <div className="ticket-item">
+            <Link to='/'class='edit-link display-list'>
+            <div className='edit '>Edit</div>
             </Link>
-            <div className="type display">{ticket.type}</div>
-            <div className="priority display ">{ticket.priority}</div>
-            <div className="status display">{ticket.status}</div>
+            <div className="type display-list">{ticket.type}</div>
+            <div className="priority display-list  ">{ticket.priority}</div>
+            <div className="status display-list">{ticket.status}</div>
+            <div className="add display-list ">{ticket.address}</div>
           </div>
         </div>
       </div>
     ));
     return (
       <div className="ticket-search">
-        <div>
+        <div className='search-container'>
           <input
             className="search-box"
             type="text"
             placeholder="Search for a ticket"
           />
         </div>
-        <div>
+        <div className='ticket-scroll'>
           {ticketList}
         </div>
       </div>
