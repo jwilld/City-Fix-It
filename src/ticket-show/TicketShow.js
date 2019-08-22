@@ -1,14 +1,20 @@
 import React, { Component } from "react";
 import "./TicketShow.css";
+import Axios from "axios";
 
 class TicketShow extends Component {
-  onDelete = () => {};
+
+  delete = () => {
+    let url = 'https://city-fix-it.herokuapp.com/tickets/delete/'
+    Axios.delete(url + `${this.props.location.state.ticketInfo._id}`)
+  
+  };
   render() {
     console.log(this.props);
     return (
       <div className="ticket-show">
         <div className="ticket-container">
-          <div className="delete-container">
+          <div onClick = {this.delete}className="delete-container">
             <span className="delete-text">Delete</span>
           </div>
           <p className="ticket-address">
