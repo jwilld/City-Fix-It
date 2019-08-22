@@ -1,3 +1,8 @@
-.MapAll-container {
-    
+.mapBox {
+    float: left;
+
+}
+
+.mapAllComponent {
+    float: left;
 }
