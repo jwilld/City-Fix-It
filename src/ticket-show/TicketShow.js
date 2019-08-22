@@ -1,8 +1,19 @@
 import React, { Component } from "react";
 import "./TicketShow.css";
+import Axios from "axios";
 
 class TicketShow extends Component {
   onDelete = () => {};
+
+  onUpdate = event => {
+    event.preventDefault()
+    let url = 'https://city-fix-it.herokuapp.com/tickets/'
+    let status = new FormData(event.target)
+    Axios.put(url + `${this.props.location.state.ticketInfo._id}`, {
+      status: status.get('status')
+    })
+  };
+
   render() {
     console.log(this.props);
     return (
@@ -27,6 +38,10 @@ class TicketShow extends Component {
           <p className="ticket-description">
             {this.props.location.state.ticketInfo.description}
           </p>
+          <form  onSubmit={this.onUpdate}className='ticket-input-status'>
+          <input  name='status'></input>
+          <input type='submit' value ='submit'/>
+          </form>
         </div>
       </div>
     );
