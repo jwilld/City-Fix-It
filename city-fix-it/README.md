@@ -36,6 +36,13 @@ On the website, there are options to:
 - Surge
   - Front-end Deployment
 
+#Planned features:
+-  Google maps integration 
+-  User authentication 
+-  Photo uploading
+-  Mobile device geolocation
+-  Citizen-Government communication features
+-  Internal government communication features
 
 ## Installation Instructions
 To set up the app locally on your own system:
