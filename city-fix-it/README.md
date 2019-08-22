@@ -12,6 +12,11 @@ The idea is simple: Anyone can submit a ticket with a simple form reporting the 
 
 A representative from the government can see all of the tickets, update their status, and forward the issue to the appropriate government department. 
 
+#Deployed App
+*Live:
+https://city-fix-it.surge.sh/
+*The URL cityfix.it is tentatively owned by one project member.
+
 ## Current Features
 On the website, there are options to:
 - Create a new issue ticket
@@ -20,14 +25,24 @@ On the website, there are options to:
 - Delete a ticket
 
 ## Technologies Used
-- React JS
+- HTML/CSS/ReactJS
+  - For front end
 - Express
-- Mongoose
-- Mongo
-- MongoDB
+  - For server
+- MongoDB / Mongoose / Mongo Atlas
+  - Database
 - Heroku
+  - Back-end deployment
 - Surge
-- CSS
+  - Front-end Deployment
+
+#Planned features:
+-  Google maps integration 
+-  User authentication 
+-  Photo uploading
+-  Mobile device geolocation
+-  Citizen-Government communication features
+-  Internal government communication features
 
 ## Installation Instructions
 To set up the app locally on your own system:
