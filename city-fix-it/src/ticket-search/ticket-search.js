@@ -45,7 +45,7 @@ class TicketSearch extends Component {
         {this.state.tickets.map(ticket => {
           if(ticket.priority.toLowerCase()
           .includes(this.state.current)){
-            return <h1>urgent</h1>
+            // return <h1>{this.ticket.priority}</h1>
           }
         })}
         <div>

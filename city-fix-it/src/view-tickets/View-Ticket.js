@@ -5,6 +5,12 @@
 // import FormChange from "../form-change/Form-Change"
 // import axios from "axios";
 // import RoutineList from "../view-tickets/Routine-List";
+import React, { Component } from "react";
+import "./view-ticket.css";
+import { Route, Link } from "react-router-dom";
+import FormChange from "../form-change/Form-Change"
+import axios from "axios";
+
 
 // class ViewTicket extends Component {
 //   constructor() {
