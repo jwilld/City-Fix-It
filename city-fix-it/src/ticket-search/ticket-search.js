@@ -7,13 +7,11 @@ class TicketSearch extends Component {
   constructor() {
     super();
     this.state = {
-      tickets: [],
-      current:""
+      tickets: []
     };
   }
   typeSearch = event => {
     this.setState({ current: event.target.value.toLowerCase() })
-    console.log(this.state.current)
   }
 
   componentDidMount = () => {
@@ -24,6 +22,7 @@ class TicketSearch extends Component {
   };
 
   render() {
+    console.log(this.state.tickets);
     let ticketList = this.state.tickets.map(ticket => (
       <div>
         <div className="list-item-grid">
@@ -42,12 +41,6 @@ class TicketSearch extends Component {
     ));
     return (
       <div className="ticket-search">
-        {this.state.tickets.map(ticket => {
-          if(ticket.priority.toLowerCase()
-          .includes(this.state.current)){
-            // return <h1>{this.ticket.priority}</h1>
-          }
-        })}
         <div>
           <input
             className="search-box"
