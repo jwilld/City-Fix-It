@@ -20,10 +20,11 @@ On the website, there are options to:
 
 ## Installation Instructions
 To set up the app locally on your own system:
-    1) Fork and clone down this project repository -- make sure you are in the master branch
-    2) Install all dependencies localy using npm install, etc.
-    3) Start up your server and navigate to the indicated port number in your browser
-    4) Use the seed files to seed your database
+
+1) Fork and clone down this project repository -- make sure you are in the master branch
+2) Install all dependencies localy using npm install, etc.
+3) Start up your server and navigate to the indicated port number in your browser
+4) Use the seed files to seed your database
 
 ## Contributors
 - David Hutchings -- [David's GitHub Profile](https://git.generalassemb.ly/DJHUTCHINGS)
