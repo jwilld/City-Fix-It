@@ -29,12 +29,15 @@ class TicketShow extends Component {
             <span className="delete-text">Delete</span>
           </div>
           <p className="ticket-address">
+            <span>Address : </span>
             {this.props.location.state.ticketInfo.address}
           </p>
           <p className="ticket-priority">
+            <span>Priority: </span>
             {this.props.location.state.ticketInfo.priority}
           </p>
           <p className="ticket-type">
+            <span>Type: </span>
             {this.props.location.state.ticketInfo.type}
           </p>
           <p className="ticket-status">
@@ -42,11 +45,15 @@ class TicketShow extends Component {
             {this.props.location.state.ticketInfo.status}
           </p>
           <p className="ticket-description">
+            <span>Description: </span>
             {this.props.location.state.ticketInfo.description}
           </p>
           <form  onSubmit={this.onUpdate}className='ticket-input-status'>
-          <input  name='status'></input>
+          <input placeholder='update status' name='status'></input>
+          <div className = 'submit-button'>
           <input type='submit' value ='submit'/>
+
+          </div>
           </form>
         </div>
       </div>
