@@ -52,7 +52,9 @@ p span{
     grid-row: 5;
     grid-column: 2/4;
     font-size: 20px;
+    
 }
 .submit-button{
     grid-row: 6;
+    
 }
