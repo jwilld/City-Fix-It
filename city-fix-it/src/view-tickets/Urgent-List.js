@@ -13,6 +13,7 @@ class TicketList extends Component {
             <Link to='/main/view/urgent/edit'class='edit-link'>
             <div className='edit display'>Edit</div>
             </Link>
+            {/* <div className="address display">{stat.address}</div> */}
             <div className="type display">{stat.type}</div>
             <div className="priority display ">{stat.priority}</div>
             <div className="status display">{stat.status}</div>

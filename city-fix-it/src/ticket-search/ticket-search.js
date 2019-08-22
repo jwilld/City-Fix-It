@@ -28,6 +28,7 @@ class TicketSearch extends Component {
             <Link to='/main/view/urgent/edit'class='edit-link'>
             <div className='edit display'>Edit</div>
             </Link>
+            {/* <div className="address display">{ticket.address}</div> */}
             <div className="type display">{ticket.type}</div>
             <div className="priority display ">{ticket.priority}</div>
             <div className="status display">{ticket.status}</div>
