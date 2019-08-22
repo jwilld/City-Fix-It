@@ -11,7 +11,7 @@ class Dashboard extends Component {
           <div className='dash-menu'>
             <header className='dash-header'>Dashboard</header>
             <div className ='dash-menu-items'>
-              <Link className = 'dash-link' to='/main/view/'>
+              <Link className = 'dash-link' to='/main/ticket-search'>
             <ul>View Tickets</ul>
 
               </Link>
