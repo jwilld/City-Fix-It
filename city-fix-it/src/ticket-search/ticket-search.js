@@ -6,7 +6,7 @@ class TicketSearch extends Component {
     return (
       <div>
         <div>
-          <input className='search-box' type="text" placeholder="serach for ticket" />
+          <input className='search-box' type="text" placeholder="search for ticket" />
         </div>
       </div>
     );
