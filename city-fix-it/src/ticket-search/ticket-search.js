@@ -10,6 +10,9 @@ class TicketSearch extends Component {
       tickets: []
     };
   }
+  typeSearch = event => {
+    this.setState({ current: event.target.value.toLowerCase() })
+  }
 
   componentDidMount = () => {
     const url = "https://city-fix-it.herokuapp.com/tickets";
@@ -43,6 +46,7 @@ class TicketSearch extends Component {
             className="search-box"
             type="text"
             placeholder="Search for a ticket"
+            onChange={this.typeSearch}
           />
         </div>
         <div>
