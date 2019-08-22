@@ -10,6 +10,7 @@ class CreateTicket extends Component {
       type:'',
       priority:'',
       description:'',
+      status:'Pending'
     }
   }
   

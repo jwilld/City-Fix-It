@@ -11,8 +11,9 @@
     height: 20em;
     width: 20em;
     display: grid;
-    grid-template-rows: 4fr 10fr;
+    grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
     text-align: center;
 }
 
@@ -25,8 +26,8 @@
 
 }
 .form-submit{
-    width: 10vw;
-    height: 5vh;
+    width: 7em;
+    height: 2em;
     background-color: rgb(45,48,56);
     color: white;
     font-weight: bold;

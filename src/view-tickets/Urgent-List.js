@@ -10,7 +10,7 @@ class TicketList extends Component {
         <div className="list-item-grid">
       
           <div className="urgent-item">
-            <Link to='/main/view/urgent/edit'class='edit-link'>
+            <Link to='/main/view/urgent/edit/' className='edit-link'>
             <div className='edit display'>Edit</div>
             </Link>
             {/* <div className="address display">{stat.address}</div> */}
