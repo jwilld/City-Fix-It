@@ -8,12 +8,7 @@ for(i=0; i < 100 ; i++){
     if(i%2 === 0){
         priorityChoice = 'Urgent'
         axios.post(url,{
-            address:{
-                street: '111 Washington St',
-                apartment: '5',
-                city: 'washington',
-                state: 'dc'
-            },
+            address:'1411 Washington St, Washington DC 20001',
             type: 'damage',
             description:' broken hydrant',
             priority: priorityChoice
@@ -23,12 +18,7 @@ for(i=0; i < 100 ; i++){
     }else{
         priorityChoice = 'Routine'
         axios.post(url, {
-            address:{
-                street: '112 Washington St',
-                apartment: '20',
-                city: 'washington',
-                state: 'dc'
-            },
+            address: '1411 Washington St, Washington DC 20001',
             type: 'damage',
             description:' destroyed road',
             priority: priorityChoice
