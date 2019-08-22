@@ -35,7 +35,7 @@ class ViewTicket extends Component {
         <div className="link-grid">
         </div>
         <div className="ticket-view-grid">
-          <Route path="/main/view/urgent/edit"
+          <Route name ='edit' path="/main/view/urgent/edit/"
           render={() => <FormChange/>}/>
         </div>
       </div>

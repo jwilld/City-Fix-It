@@ -1,11 +1,15 @@
 .ticket-search {
   display: grid;
-  grid-template-rows: .2fr .5fr repeat(4, 1fr);
+  grid-template-rows: 1fr .3fr .2fr;
   grid-template-columns: repeat(3, 1fr);
+}
+.ticket-show{
+    grid-row: 1;
+    grid-column: 2/5;
 }
 .search-container {
   grid-column: 2;
-  grid-row: 2;
+  grid-row:2;
   text-align: center;
 }
 
