@@ -7,12 +7,12 @@ City-Fix-It is a repair ticket system that allows you to report tickets to the l
 
 Our proof-of-concept system is focused on the District of Columbia municipal government, but this system could be implemented in any municipality. 
 
-#Concept
+# Concept
 The idea is simple: Anyone can submit a ticket with a simple form reporting the location (street address) of the issue and a description.
 
 A representative from the government can see all of the tickets, update their status, and forward the issue to the appropriate government department. 
 
-##Deployed App:
+# Deployed App:
 
 https://city-fix-it.surge.sh/
 
