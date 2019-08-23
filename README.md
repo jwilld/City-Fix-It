@@ -25,16 +25,25 @@ On the website, there are options to:
 - Delete a ticket
 
 # Technologies Used
-- HTML/CSS/ReactJS
-  - For front end
-- Express
-  - For server
-- MongoDB / Mongoose / Mongo Atlas
-  - Database
-- Heroku
-  - Back-end deployment
-- Surge
-  - Front-end Deployment
+- For front end
+  - HTML
+  - CSS 
+  - ReactJS
+  
+- For server
+  - Express
+  
+- Database
+  - MongoDB
+  - Mongoose
+  - Mongo Atlas
+  
+- Back-end deployment
+  - Heroku
+  
+- Front-end Deployment
+  - Surge
+  
 
 #Planned features:
 -  Google maps integration 
