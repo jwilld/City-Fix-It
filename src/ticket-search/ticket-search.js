@@ -44,9 +44,11 @@ class TicketSearch extends Component {
         <div className="ticket-scroll">
           {this.state.tickets.map((ticket, key) => {
             if (ticket.address != undefined) {
-              if (ticket.address.toLowerCase().includes(this.state.current)
+              if (String(ticket._id).toLowerCase().includes(this.state.current)
               ||
               (ticket.priority.toLowerCase().includes(this.state.current)
+              ||
+              (ticket.address.toLowerCase().includes(this.state.current))
               
               )) {
                 return <TicketList key={key} tickets={ticket} />;
