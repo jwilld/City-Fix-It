@@ -12,10 +12,10 @@ The idea is simple: Anyone can submit a ticket with a simple form reporting the 
 
 A representative from the government can see all of the tickets, update their status, and forward the issue to the appropriate government department. 
 
-#Deployed App
-*Live:
+##Deployed App:
+
 https://city-fix-it.surge.sh/
-*The URL cityfix.it is tentatively owned by one project member.
+
 
 ## Current Features
 On the website, there are options to:
