@@ -4,12 +4,13 @@ import Axios from "axios";
 
 class TicketShow extends Component {
 
+
   delete = () => {
     let url = 'https://city-fix-it.herokuapp.com/tickets/delete/'
     Axios.delete(url + `${this.props.location.state.ticketInfo._id}`)
   
   };
-  onDelete = () => {};
+
 
   onUpdate = event => {
     event.preventDefault()
@@ -18,6 +19,7 @@ class TicketShow extends Component {
     Axios.put(url + `${this.props.location.state.ticketInfo._id}`, {
       status: status.get('status')
     })
+    this.forceUpdate()
   };
 
   render() {

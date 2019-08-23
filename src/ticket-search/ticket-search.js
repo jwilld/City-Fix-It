@@ -1,14 +1,21 @@
 import React, { Component } from "react";
 import "./ticket-search.css";
 import axios from "axios";
-import { Route, Link } from 'react-router-dom'
-import TicketShow from '../ticket-show/TicketShow'
+import { Route, Link } from "react-router-dom";
+
+import TicketShow from "../ticket-show/TicketShow";
+import TicketList from "../ticket-list/Ticket-List.js";
 
 class TicketSearch extends Component {
   constructor() {
     super();
     this.state = {
-      tickets: []
+      tickets: [
+        {
+          address: "string"
+        }
+      ],
+      current: ""
     };
   }
 
@@ -19,38 +26,35 @@ class TicketSearch extends Component {
     });
   };
 
+  ticketSearch = event => {
+    this.setState({ current: event.target.value.toLowerCase() });
+  };
+
   render() {
-    // console.log(this.state.tickets);
-    let ticketList = this.state.tickets.map((ticket, i) => (
-      <div key={i}>
-        <div className="list-item-grid">
-      
-          <div className="ticket-item">
-            <Link className='edit-link display-list' to={{ pathname:'/main/ticket-search/'+ ticket._id,
-            state:{ticketInfo:ticket} }}>
-            <div className='edit '>Edit</div>
-            </Link>
-            <div className="type display-list">{ticket.type}</div>
-            <div className="priority display-list  ">{ticket.priority}</div>
-            <div className="status display-list">{ticket.status}</div>
-            <div className="add display-list ">{ticket.address}</div>
-          </div>
-        </div>
-      </div>
-    ));
     return (
       <div className="ticket-search">
-        <div className='search-container'>
+        <div className="search-container">
           <input
             className="search-box"
             type="text"
             placeholder="Search for a ticket"
+            onChange={this.ticketSearch}
           />
         </div>
-        <div className='ticket-scroll'>
-          {ticketList}
+        <div className="ticket-scroll">
+          {this.state.tickets.map((ticket, key) => {
+            if (ticket.address != undefined) {
+              if (ticket.address.toLowerCase().includes(this.state.current)
+              ||
+              (ticket.priority.toLowerCase().includes(this.state.current)
+              
+              )) {
+                return <TicketList key={key} tickets={ticket} />;
+              }
+            }
+          })}
         </div>
-        <Route path='/main/ticket-search/:id' component={TicketShow}/>
+        <Route path="/main/ticket-search/:id" component={TicketShow} />
       </div>
     );
   }
