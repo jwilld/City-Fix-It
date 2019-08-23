@@ -17,6 +17,9 @@ p span{
     align-items: center;
     background-color: rgba(255, 0, 0, 0.516);
     transition: 1s;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 .delete-container:hover{

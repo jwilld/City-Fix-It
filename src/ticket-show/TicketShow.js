@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./TicketShow.css";
 import Axios from "axios";
+import { Link } from 'react-router-dom'
 
 class TicketShow extends Component {
 
@@ -27,9 +28,11 @@ class TicketShow extends Component {
     return (
       <div className="ticket-show">
         <div className="ticket-container">
-          <div onClick = {this.delete}className="delete-container">
+          <Link to='/main/ticket-search/' className="delete-container">
+          <div onClick = {this.delete}>
             <span className="delete-text">Delete</span>
           </div>
+          </Link>
           <p className="ticket-address">
             <span>Address : </span>
             {this.props.location.state.ticketInfo.address}

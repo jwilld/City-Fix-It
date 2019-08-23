@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./ticket-search.css";
 import axios from "axios";
-import { Route, Link } from "react-router-dom";
+import { Route} from "react-router-dom";
 
 import TicketShow from "../ticket-show/TicketShow";
 import TicketList from "../ticket-list/Ticket-List.js";
@@ -12,7 +12,10 @@ class TicketSearch extends Component {
     this.state = {
       tickets: [
         {
-          address: "string"
+          address: "101 Dragon Rd",
+          priority: "Urgent",
+          type: 'Damage',
+          _id: 'XXXXXX',
         }
       ],
       current: ""
@@ -43,7 +46,7 @@ class TicketSearch extends Component {
         </div>
         <div className="ticket-scroll">
           {this.state.tickets.map((ticket, key) => {
-            if (ticket.address != undefined) {
+            if (ticket.address !== undefined) {
               if (String(ticket._id).toLowerCase().includes(this.state.current)
               ||
               (ticket.priority.toLowerCase().includes(this.state.current)
