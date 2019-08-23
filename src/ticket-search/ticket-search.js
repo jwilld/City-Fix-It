@@ -49,7 +49,6 @@ class TicketSearch extends Component {
               (ticket.priority.toLowerCase().includes(this.state.current)
               ||
               (ticket.address.toLowerCase().includes(this.state.current))
-              
               )) {
                 return <TicketList key={key} tickets={ticket} />;
               }

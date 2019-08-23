@@ -50,6 +50,10 @@ class TicketShow extends Component {
             <span>Description: </span>
             {this.props.location.state.ticketInfo.description}
           </p>
+          <p className="id">
+            <span>ID: </span>
+            {String(this.props.location.state.ticketInfo._id).slice(19,24)}
+          </p>
           <form  onSubmit={this.onUpdate}className='ticket-input-status'>
           <input placeholder='update status' name='status'></input>
           <div className = 'submit-button'>

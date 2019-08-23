@@ -24,6 +24,10 @@ p span{
     color: red;
     background-color: white;
 }
+.id{
+    grid-row: 1;
+    grid-column:4;
+}
 
 .ticket-priority{
     grid-column: 2;
