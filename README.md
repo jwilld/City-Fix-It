@@ -17,14 +17,14 @@ A representative from the government can see all of the tickets, update their st
 https://city-fix-it.surge.sh/
 
 
-## Current Features
+# Current Features
 On the website, there are options to:
 - Create a new issue ticket
 - Show all tickets
 - Update an already existing ticket
 - Delete a ticket
 
-## Technologies Used
+# Technologies Used
 - HTML/CSS/ReactJS
   - For front end
 - Express
@@ -44,14 +44,14 @@ On the website, there are options to:
 -  Citizen-Government communication features
 -  Internal government communication features
 
-## Installation Instructions
+# Installation Instructions
 To set up the app locally on your own system:
     1) Fork and clone down this project repository -- make sure you are in the master branch
     2) Install all dependencies localy using npm install, etc.
     3) Start up your server and navigate to the indicated port number in your browser
     4) Use the seed files to seed your database
 
-## Contributors
+# Contributors
 - David Hutchings -- [David's GitHub Profile](https://git.generalassemb.ly/DJHUTCHINGS)
 - Jamie Miller -- [Jamie's GitHub Profile](https://git.generalassemb.ly/jamiemiller8)
 - Jerry Davidson -- [Jerry's GitHub Profile](https://git.generalassemb.ly/Jwilld)
