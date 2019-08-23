@@ -52,7 +52,6 @@ To set up the app locally on your own system:
     For the front end, install these dependencies:
       - Axios
       - React
-      - React-advanced-form
       - react-dom
       - react-router
       - react-router-dom
