@@ -11,10 +11,13 @@
   grid-column: 2;
   grid-row:2;
   text-align: center;
+
 }
 
 .search-box {
   font-size: 35px;
+    /* david added */
+    border-radius: 5px;
 }
 
 .ticket-item {
@@ -22,6 +25,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   text-align: center;
+    
 }
 
 .edit-link {
@@ -53,6 +57,8 @@
   overflow: hidden;
   overflow-y: scroll;
   width: 50em;
+      /* david added */
+      border-radius: 5px;
 }
 
 .display-list{
@@ -60,6 +66,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  
 }
 
 ::-webkit-input-placeholder {
