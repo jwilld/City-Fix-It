@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./TicketShow.css";
+import "./ticketshow.css";
 import Axios from "axios";
 import { Link } from 'react-router-dom'
 
