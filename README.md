@@ -45,7 +45,7 @@ On the website, there are options to:
   - Surge
   
 
-#Planned features:
+# Planned features:
 -  Google maps integration 
 -  User authentication 
 -  Photo uploading
