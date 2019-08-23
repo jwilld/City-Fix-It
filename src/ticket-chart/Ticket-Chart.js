@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import './ticket-chart.css'
 import { XAxis, YAxis,XYPlot, VerticalBarSeries,LabelSeries } from "react-vis";
 
 class TicketChart extends Component {
   constructor() {
     super();
     this.state = {
-      urgentLength: 100,
+      urgentLength: 200,
       routineLength: 100
     };
   }
@@ -36,8 +37,18 @@ class TicketChart extends Component {
 
     ]
     return (
-      <div>
-        <XYPlot xType="ordinal" width={chartWidth} height={chartHeight} yDomain={chartDomain}>
+      <div className="chart">
+        <div className='description-header'>  
+          <h1>City Fix-It</h1>
+        </div>
+          <div className='app-description'>
+          <p>
+           This website allows you to report repair tickets to the local government.
+           Simply fill out the location and other details of the issue along with a description.
+          </p>
+          </div>
+          <div className= 'chart-container'>
+        <XYPlot className='the-chart' xType="ordinal" width={chartWidth} height={chartHeight} yDomain={chartDomain}>
             <XAxis/>
             <YAxis/>
             <VerticalBarSeries
@@ -54,6 +65,8 @@ class TicketChart extends Component {
             />
 
         </XYPlot>
+
+          </div>
       </div>
     );
   }
