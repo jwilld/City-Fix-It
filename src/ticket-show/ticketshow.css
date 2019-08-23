@@ -1,22 +1,32 @@
 .ticket-container{
-    box-shadow: 0 10px 20px -4px;
+    box-shadow: 0 10px 10px -4px;
     display: grid;
     grid-template-rows: repeat(4,1fr);
     grid-template-columns: repeat(4,1fr);
+    width: 75%;
     text-align: center;
+    /* david change */
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
 }
 
 .delete-container{
     width: 6vw;
+   
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 0, 0, 0.516);
     transition: 1s;
+      /* david change */
+      border-radius: 5px;
+      margin: 20px 10px 5px 20px;
+      padding: 10px;
 }
 
 .delete-container:hover{
-    transition: 1s;
+    transition: .1s;
     color: red;
     background-color: white;
 }
@@ -39,6 +49,8 @@
 .ticket-address{
     grid-row: 2;
     grid-column: 2/4;
+    /* david change */
+    font-size: 20px;
 }
 .ticket-description{
     grid-row: 3;
