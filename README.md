@@ -1,9 +1,9 @@
-# City-Fix-It 
+# City Fix-It 
 Have you ever been walking down the street and noticed that something was in need of repair or improvement?  
 
 For example, maybe a parking meter has been destroyed or a sign or trash can knocked over.
 
-City-Fix-It is a repair ticket system that allows you to report tickets to the local government. 
+City Fix-It is a repair ticket system that allows you to report tickets to the local government. 
 
 Our proof-of-concept system is focused on the District of Columbia municipal government, but this system could be implemented in any municipality. 
 
