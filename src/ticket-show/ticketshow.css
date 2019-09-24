@@ -1,14 +1,9 @@
 .ticket-container{
-    box-shadow: 0 10px 10px -4px;
+    box-shadow: 0 10px 20px -4px;
     display: grid;
     grid-template-rows: repeat(5,1fr) .5fr;
     grid-template-columns: repeat(4,1fr);
-    width: 75%;
     text-align: center;
-    /* david change */
-    border-radius: 5px;
-    margin: 20px;
-    padding: 10px;
 }
 p span{
     color: rgba(73, 215, 254, 0.907);
@@ -17,23 +12,18 @@ p span{
 
 .delete-container{
     width: 6vw;
-   
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 0, 0, 0.516);
     transition: 1s;
-      /* david change */
-      border-radius: 5px;
-      margin: 20px 10px 5px 20px;
-      padding: 10px;
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
 .delete-container:hover{
-    transition: .1s;
+    transition: 1s;
     color: red;
     background-color: white;
 }
@@ -60,8 +50,6 @@ p span{
 .ticket-address{
     grid-row: 2;
     grid-column: 2/4;
-    /* david change */
-    font-size: 20px;
 }
 .ticket-description{
     grid-row: 3;
@@ -75,5 +63,5 @@ p span{
 }
 .submit-button{
     grid-row: 6;
-    
 }
+    

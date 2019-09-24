@@ -7,7 +7,7 @@ class TicketChart extends Component {
   constructor() {
     super();
     this.state = {
-      urgentLength: 100,
+      urgentLength: 200,
       routineLength: 100
     };
   }

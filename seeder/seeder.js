@@ -9,9 +9,9 @@ for(i=0; i < 50 ; i++){
     if(i%2 === 0){
         priorityChoice = 'Urgent'
         axios.post(url,{
-            address:`53${i} Red Rd, Washington DC 20008`,
+            address:`5${i} Grey Rd, Washington DC 20008`,
             type: 'damage',
-            description:' broken hydrant',
+            description:' big crack in the road',
             priority: priorityChoice
         
         } )
@@ -20,9 +20,9 @@ for(i=0; i < 50 ; i++){
     }else{
         priorityChoice = 'Routine'
         axios.post(url, {
-            address:`54${i} Green Ln, Washington DC 20005`,
+            address:`4${i} Red Ln, Washington DC 20005`,
             type: 'repair',
-            description:' destroyed road',
+            description:' theres a massive leek',
             priority: priorityChoice
         }).catch(e => console.log(e))
         
