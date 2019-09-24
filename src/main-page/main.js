@@ -19,7 +19,7 @@ class Main extends Component {
         <div className="main-content">
           <Route path ='/main/ticket-search' component={TicketSearch}/>
           <Route path ='/main/create' component={CreateTicket}/> 
-          <Dashboard />
+          <Dashboard path ='/main/' component={Main} />
           <Route exact path='/main' component={TicketChart}/>
         </div>
       </div>
