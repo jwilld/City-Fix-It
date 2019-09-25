@@ -8,6 +8,9 @@ const initialState = {
     isGetting: false,
     isGot: false,
     isGetError: false,
+    isNewTicket: false,
+    isNewTicketSuccess: false,
+    isNewTicketError: false,
     tickets: [
         {
             address: "Loading ... ",
@@ -47,6 +50,28 @@ const asyncReducer = (state = initialState, action) => {
             return Object.assign({}, state, {
                 currentTickets: action.search
             })
+        }
+        case "NEW_TICKET":{
+            return Object.assign({}, state, {
+                isNewTicket: true,
+                isNewTicketError: false,
+                isNewTicketSuccess: false
+                
+            } )
+        }
+        case "TICKET_SUCCESS":{
+            return Object.assign({}, state, {
+                isNewTicket: false,
+                isNewTicketSuccess: true,
+                isNewTicketError: false
+            } )
+        }
+        case "TICKET_ERROR":{
+            return Object.assign({}, state, {
+                isNewTicket: false,
+                isNewTicketSuccess: false,
+                isNewTicketError: true  
+            } )
         }
         default: 
             return state;

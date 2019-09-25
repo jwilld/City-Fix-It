@@ -1,6 +1,13 @@
 import axios from 'axios'
 import store from '../store/store'
 
+export const set_tickets = param => {
+    return {
+        type: "SET_TICKETS",
+        search: param
+        
+    }
+}
 export const delete_start = () => {
     return {
         type: "DELETE_TICKET"
@@ -96,13 +103,35 @@ export const get_tickets = () => {
 
 }
 
-export const set_tickets = param => {
-    return {
-        type: "SET_TICKETS",
-        search: param
-        
 
+export const new_ticket = () => {
+    return{
+        type: "NEW_TICKET"
     }
-
-    
 }
+
+export const new_ticket_success = () => {
+    return {
+        type: "TICKET_SUCCESSS"
+    }
+}
+
+export const new_ticket_error = () => {
+    return {
+        type: "TICKET_ERROR"
+    }
+}
+
+
+export const create_ticket = ticket => {
+    store.dispatch(new_ticket())
+    console.log(ticket)
+    return function (dispatch,getState) {
+        let url = 'https://city-fix-it.herokuapp.com/tickets/create'
+        axios.post(url, ticket)
+        .then( response => dispatch(new_ticket_success())
+        )
+        .catch(e => dispatch(new_ticket_error()))
+    }
+}
+    

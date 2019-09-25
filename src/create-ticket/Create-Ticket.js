@@ -1,12 +1,14 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux'
+import { create_ticket } from '../actions/actions'
 import "./create-ticket.css";
-import axios from 'axios'
 
 
 class CreateTicket extends Component {
   constructor(){
     super()
     this.state = {
+      address:'',
       type:'',
       priority:'',
       description:'',
@@ -20,26 +22,23 @@ class CreateTicket extends Component {
     let newTicket = {}
     let keys = Object.keys(this.state)
     keys.forEach(key => (newTicket[key] = form.get(key)))
-    console.log(newTicket)
-    const url = 'https://city-fix-it.herokuapp.com/tickets/create'
-    axios.post(url, newTicket)
-    .then( response => console.log(response))
+    this.props.dispatch(create_ticket(newTicket))
+
   }
 
 
   render() {
-
     let headers = ['Address','Type','Priority','Description']
-    let createForm = headers.map(name =>(
+    let createForm = headers.map((name,i)=>(
       name === 'Description' ?
-      <div>
+      <div key={i}>
         <span>{name}</span>
-        <textarea  className= 'textarea-box input ' type="text" name={name}></textarea>
+        <textarea  className= 'textarea-box input ' type="text" name={name.toLowerCase()}></textarea>
       </div>
       :
-      <div>
-        <span>{name}</span>
-        <input  className= 'input'type="text" name={name}/>
+      <div key={i}>
+        <span >{name}</span>
+        <input className= 'input'type="text" name={name.toLowerCase()}/>
       </div>
     ))
     return (
@@ -58,4 +57,9 @@ class CreateTicket extends Component {
     );
   }
 }
-export default CreateTicket;
+const mapStateToProps = state => {
+  return {
+    data: state
+  };
+};
+export default connect(mapStateToProps)(CreateTicket)
