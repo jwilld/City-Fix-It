@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux'
+import { get_tickets } from '../actions/actions'
 import "./ticket-search.css";
 import axios from "axios";
 import { Route} from "react-router-dom";
@@ -7,33 +9,17 @@ import TicketShow from "../ticket-show/TicketShow";
 import TicketList from "../ticket-list/Ticket-List.js";
 
 class TicketSearch extends Component {
-  constructor() {
-    super();
-    this.state = {
-      tickets: [
-        {
-          address: "101 Dragon Rd",
-          priority: "Urgent",
-          type: 'Damage',
-          _id: 'XXXXXX',
-        }
-      ],
-      current: ""
-    };
-  }
 
   componentDidMount = () => {
-    const url = "https://city-fix-it.herokuapp.com/tickets";
-    axios.get(url).then(response => {
-      this.setState({ tickets: response.data });
-    });
+    this.props.dispatch(get_tickets())
   };
 
-  ticketSearch = event => {
-    this.setState({ current: event.target.value.toLowerCase() });
-  };
+  // ticketSearch = event => {
+  //   this.setState({ current: event.target.value.toLowerCase() });
+  // };
 
   render() {
+    console.log(this.props)
     return (
       <div className="ticket-search">
         <div className="search-container">
@@ -45,23 +31,28 @@ class TicketSearch extends Component {
           />
         </div>
         <div className="ticket-scroll">
-          {this.state.tickets.map((ticket, key) => {
+          {this.props.data.tickets.map((ticket, key) => {
             if (ticket.address !== undefined) {
-              if (String(ticket._id).toLowerCase().includes(this.state.current)
+              if (String(ticket._id).toLowerCase().includes(this.props.data.currentTickets)
               ||
-              (ticket.priority.toLowerCase().includes(this.state.current)
+              (ticket.priority.toLowerCase().includes(this.props.data.currentTickets)
               ||
-              (ticket.address.toLowerCase().includes(this.state.current))
+              (ticket.address.toLowerCase().includes(this.props.datas.currentTickets))
               )) {
                 return <TicketList key={key} tickets={ticket} />;
               }
             }
           })}
         </div>
-        <Route path="/main/ticket-search/:id" component={TicketShow} />
+        <Route component={TicketShow} />
       </div>
     );
   }
 }
 
-export default TicketSearch;
+const mapStateToProps = state => {
+  return {
+    data: state
+  };
+};
+export default connect(mapStateToProps)(TicketSearch)

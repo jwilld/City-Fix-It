@@ -1,0 +1,95 @@
+import axios from 'axios'
+import store from '../store/store'
+
+export const delete_start = () => {
+    return {
+        type: "DELETE_TICKET"
+    }
+}
+
+export const delete_finished = () => {
+    return {
+        type: "DELETE_FINISHED"
+    }
+}
+
+export const delete_error = () => {
+    return {
+        type: 'DELETE_ERROR'
+    }
+}
+
+
+export const delete_ticket = ticket => {
+    store.dispatch(delete_start());
+    return function (dispatch, getState) {
+        let url = 'https://city-fix-it.herokuapp.com/tickets/delete/'
+        return axios.delete(url + ticket)
+        .then(data => {
+        })
+        .then(dispatch(delete_finished()))
+        .catch( e => dispatch(delete_error()));
+    }
+};
+
+export const update_start = () => {
+    return {
+        type: "UPDATE_START"
+    }
+}
+
+export const update_finished = () => {
+    return {
+        type: "UPDATE_FINISHED"
+    }
+}
+
+export const update_error = () => {
+    return {
+        type:  "UPDATE_ERROR"
+    }
+}
+
+export const update_ticket = ticket => {
+    store.dispatch(update_start());
+    return function (dispatch, getState) {
+        let url = 'https://city-fix-it.herokuapp.com/tickets/'
+        return axios.put(url + ticket, {
+            status: ticket.get('status')
+        }).then(data => {
+        })
+        .then(dispatch(update_finished()))
+        .catch(e => dispatch(update_error()));
+    }
+}
+
+export const start_tickets = () => {
+    return {
+        type: "GET_TICKETS"
+    }
+}
+
+export const finish_tickets = res => {
+    return {
+        type: "GOT_TICKETS",
+        tickets: res
+
+    }
+}
+
+export const tickets_error = () => {
+    return{
+        type: "GET_TICKETS_ERROR"
+    }
+}
+
+export const get_tickets = () => {
+    store.dispatch(start_tickets())
+    return function (dispatch,getState) {
+        let url = "https://city-fix-it.herokuapp.com/tickets";
+        axios.get(url)
+          .then(response => {dispatch(finish_tickets(response.data))})
+          .catch(e => dispatch(tickets_error()))
+    }
+
+}
