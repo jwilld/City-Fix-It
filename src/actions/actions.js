@@ -25,11 +25,11 @@ export const delete_ticket = ticket => {
     return function (dispatch, getState) {
         let url = 'https://city-fix-it.herokuapp.com/tickets/delete/'
         return axios.delete(url + ticket)
-        .then(res => {
-            dispatch(get_tickets())
-        })
-        .then(dispatch(get_tickets()))
-        .catch( e => dispatch(delete_error()));
+            .then(res => {
+                dispatch(get_tickets())
+            })
+            .then(dispatch(get_tickets()))
+            .catch(e => dispatch(delete_error()));
     }
 };
 
@@ -47,11 +47,11 @@ export const update_finished = () => {
 
 export const update_error = () => {
     return {
-        type:  "UPDATE_ERROR"
+        type: "UPDATE_ERROR"
     }
 }
 
-export const update_ticket =  (id,status) => {
+export const update_ticket = (id, status) => {
     store.dispatch(update_start());
     return function (dispatch, getState) {
         let url = 'https://city-fix-it.herokuapp.com/tickets/'
@@ -60,8 +60,8 @@ export const update_ticket =  (id,status) => {
         }).then(data => {
             dispatch(get_tickets())
         })
-        .then(dispatch(update_finished()))
-        .catch(e => dispatch(update_error()))
+            .then(dispatch(update_finished()))
+            .catch(e => dispatch(update_error()))
     }
 }
 
@@ -80,18 +80,29 @@ export const finish_tickets = res => {
 }
 
 export const tickets_error = () => {
-    return{
+    return {
         type: "GET_TICKETS_ERROR"
     }
 }
 
 export const get_tickets = () => {
     store.dispatch(start_tickets())
-    return function (dispatch,getState) {
+    return function (dispatch, getState) {
         let url = "https://city-fix-it.herokuapp.com/tickets";
         axios.get(url)
-          .then(response => {dispatch(finish_tickets(response.data))})
-          .catch(e => dispatch(tickets_error()))
+            .then(response => { dispatch(finish_tickets(response.data)) })
+            .catch(e => dispatch(tickets_error()))
     }
 
+}
+
+export const set_tickets = param => {
+    return {
+        type: "SET_TICKETS",
+        search: param
+        
+
+    }
+
+    
 }

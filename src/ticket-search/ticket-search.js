@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux'
-import { get_tickets } from '../actions/actions'
+import { get_tickets, set_tickets } from '../actions/actions'
 import "./ticket-search.css";
 import { Route} from "react-router-dom";
 
@@ -15,9 +15,9 @@ class TicketSearch extends Component {
   
 
 
-  // ticketSearch = event => {
-  //   this.setState({ current: event.target.value.toLowerCase() });
-  // };
+  ticketSearch = event => {
+    this.props.dispatch(set_tickets(event.target.value.toLowerCase()))
+  };
 
   render() {
     return (
@@ -37,7 +37,7 @@ class TicketSearch extends Component {
               ||
               (ticket.priority.toLowerCase().includes(this.props.data.currentTickets)
               ||
-              (ticket.address.toLowerCase().includes(this.props.datas.currentTickets))
+              (ticket.address.toLowerCase().includes(this.props.data.currentTickets))
               )) {
                 return <TicketList key={key} tickets={ticket} />;
               }

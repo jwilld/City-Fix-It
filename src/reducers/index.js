@@ -43,6 +43,11 @@ const asyncReducer = (state = initialState, action) => {
                 tickets: action.tickets
             } )
         }
+        case "SET_TICKETS":{
+            return Object.assign({}, state, {
+                currentTickets: action.search
+            })
+        }
         default: 
             return state;
     }
