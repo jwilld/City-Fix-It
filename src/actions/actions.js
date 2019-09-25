@@ -125,7 +125,6 @@ export const new_ticket_error = () => {
 
 export const create_ticket = ticket => {
     store.dispatch(new_ticket())
-    console.log(ticket)
     return function (dispatch,getState) {
         let url = 'https://city-fix-it.herokuapp.com/tickets/create'
         axios.post(url, ticket)
