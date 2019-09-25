@@ -28,8 +28,8 @@ class TicketChart extends Component {
   };
 
   render() {
-    const chartWidth = 250;
-    const chartHeight = 200;
+    const chartWidth = 300;
+    const chartHeight = 210;
     const chartDomain = [0, chartHeight];
     let myData = [
         {x:'Urgent' ,y:this.state.urgentLength},
@@ -48,7 +48,7 @@ class TicketChart extends Component {
           </p>
           </div>
           <div className= 'chart-container'>
-        <XYPlot className='the-chart' xType="ordinal" width={chartWidth} height={chartHeight} yDomain={chartDomain}>
+        <XYPlot className='the-chart' xType="ordinal" width={chartWidth} height={chartHeight} yDomain={chartDomain} color="green">
             <XAxis/>
             <YAxis/>
             <VerticalBarSeries
@@ -64,7 +64,7 @@ class TicketChart extends Component {
             
             />
 
-        </XYPlot>
+        </XYPlot> 
 
           </div>
       </div>

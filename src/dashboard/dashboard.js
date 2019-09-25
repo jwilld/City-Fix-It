@@ -9,7 +9,9 @@ class Dashboard extends Component {
       <div className='dashboard'>
         <div className='dash-grid'> 
           <div className='dash-menu'>
+            <Link className="dashboard-link" to="/main/">
             <header className='dash-header'>Dashboard</header>
+            </Link>
             <div className ='dash-menu-items'>
               <Link className = 'dash-link' to='/main/ticket-search'>
             <ul>View Tickets</ul>
@@ -19,10 +21,6 @@ class Dashboard extends Component {
 
             <ul>Create Ticket</ul>
               </Link>
-
-          
-
-
             </div>
           </div>
         </div>

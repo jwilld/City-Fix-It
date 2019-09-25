@@ -29,6 +29,16 @@
 .dash-header{
     border-bottom: 2px solid lightgray;
     padding-bottom: 2vh;
+    text-decoration: none;
+    color: white;
 }
 
-/* nothing */
+.dashboard-link {
+    text-decoration: none;
+    transition: 1s;
+}
+
+.dash-header:hover{
+    transition: .5s;
+    color: rgba(45, 48, 57, 0.126);
+}

@@ -44,6 +44,22 @@ On the website, there are options to:
 - Front-end Deployment
   - Surge
   
+# Installation Instructions
+To set up the app locally on your own system:
+    1) Fork and clone down this project repository
+    2) Install all dependencies locally using npm install, etc.
+    See Backend repo for more details on that: https://github.com/jwilld/City-Fix-It-Back
+    For the front end, install these dependencies:
+      - Axios
+      - React
+      - react-dom
+      - react-router
+      - react-router-dom
+      - react-scripts
+      
+    3) Start up your server and navigate to the indicated port number in your browser
+    
+   
 
 # Planned features:
 -  Google maps integration 
@@ -53,12 +69,6 @@ On the website, there are options to:
 -  Citizen-Government communication features
 -  Internal government communication features
 
-# Installation Instructions
-To set up the app locally on your own system:
-    1) Fork and clone down this project repository -- make sure you are in the master branch
-    2) Install all dependencies localy using npm install, etc.
-    3) Start up your server and navigate to the indicated port number in your browser
-    4) Use the seed files to seed your database
 
 # Contributors
 - David Hutchings -- [David's GitHub Profile](https://git.generalassemb.ly/DJHUTCHINGS)

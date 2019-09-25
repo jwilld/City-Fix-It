@@ -10,8 +10,8 @@ for(i=0; i < 50 ; i++){
         priorityChoice = 'Urgent'
         axios.post(url,{
             address:`5${i} Grey Rd, Washington DC 20008`,
-            type: 'damage',
-            description:' big crack in the road',
+            type: 'Damage',
+            description:' Big crack in the road',
             priority: priorityChoice
         
         } )
@@ -21,8 +21,8 @@ for(i=0; i < 50 ; i++){
         priorityChoice = 'Routine'
         axios.post(url, {
             address:`4${i} Red Ln, Washington DC 20005`,
-            type: 'repair',
-            description:' theres a massive leek',
+            type: 'Repair',
+            description:' There is a massive leek',
             priority: priorityChoice
         }).catch(e => console.log(e))
         
