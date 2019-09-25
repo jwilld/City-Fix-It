@@ -25,9 +25,10 @@ export const delete_ticket = ticket => {
     return function (dispatch, getState) {
         let url = 'https://city-fix-it.herokuapp.com/tickets/delete/'
         return axios.delete(url + ticket)
-        .then(data => {
+        .then(res => {
+            dispatch(get_tickets())
         })
-        .then(dispatch(delete_finished()))
+        .then(dispatch(get_tickets()))
         .catch( e => dispatch(delete_error()));
     }
 };
@@ -50,16 +51,17 @@ export const update_error = () => {
     }
 }
 
-export const update_ticket = ticket => {
+export const update_ticket =  (id,status) => {
     store.dispatch(update_start());
     return function (dispatch, getState) {
         let url = 'https://city-fix-it.herokuapp.com/tickets/'
-        return axios.put(url + ticket, {
-            status: ticket.get('status')
+        return axios.put(url + id, {
+            status: status
         }).then(data => {
+            dispatch(get_tickets())
         })
         .then(dispatch(update_finished()))
-        .catch(e => dispatch(update_error()));
+        .catch(e => dispatch(update_error()))
     }
 }
 

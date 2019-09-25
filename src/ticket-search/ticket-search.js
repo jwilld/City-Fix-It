@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from 'react-redux'
 import { get_tickets } from '../actions/actions'
 import "./ticket-search.css";
-import axios from "axios";
 import { Route} from "react-router-dom";
 
 import TicketShow from "../ticket-show/TicketShow";
@@ -13,13 +12,14 @@ class TicketSearch extends Component {
   componentDidMount = () => {
     this.props.dispatch(get_tickets())
   };
+  
+
 
   // ticketSearch = event => {
   //   this.setState({ current: event.target.value.toLowerCase() });
   // };
 
   render() {
-    console.log(this.props)
     return (
       <div className="ticket-search">
         <div className="search-container">
@@ -44,7 +44,7 @@ class TicketSearch extends Component {
             }
           })}
         </div>
-        <Route component={TicketShow} />
+        <Route path="/main/ticket-search/:id"component={TicketShow} />
       </div>
     );
   }
