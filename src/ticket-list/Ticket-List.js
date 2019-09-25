@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 class TicketList extends Component {
   render() {
-    // console.log(this.props)
     return (
              <div className="list-item-grid">
         <div className="ticket-item">

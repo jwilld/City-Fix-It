@@ -30,7 +30,7 @@ const asyncReducer = (state = initialState, action) => {
         }
         case "DELETE_FINISHED":{
             return Object.assign({}, state, {
-                isDeleted: true
+                isDeleted: true,
             })
         }
         case "DELETE_ERROR":{
@@ -42,6 +42,11 @@ const asyncReducer = (state = initialState, action) => {
             return Object.assign({}, state, {
                 tickets: action.tickets
             } )
+        }
+        case "SET_TICKETS":{
+            return Object.assign({}, state, {
+                currentTickets: action.search
+            })
         }
         default: 
             return state;

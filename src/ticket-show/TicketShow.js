@@ -1,71 +1,67 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { delete_ticket } from '../actions/actions'
+import { delete_ticket, update_ticket } from '../actions/actions'
 
 import "./ticketshow.css";
-import Axios from "axios";
 
 class TicketShow extends Component {
   delete = () => {
-    let url = 'https://city-fix-it.herokuapp.com/tickets/delete/'
-    Axios.delete(url + `${this.props.data.tickets._id}`)
-  
+    this.props.dispatch(delete_ticket(this.props.location.state.ticketInfo._id))
   };
-
-
   onUpdate = event => {
     event.preventDefault()
-    let url = 'https://city-fix-it.herokuapp.com/tickets/'
     let status = new FormData(event.target)
-    Axios.put(url + `${this.props.data.tickets._id}`, {
-      status: status.get('status')
-    })
-    this.forceUpdate()
+    this.props.dispatch(update_ticket(this.props.location.state.ticketInfo._id, status.get('status')))
+    console.log(this.props)
   };
 
+
+
   render() {
-    console.log(this.props.data);
     return (
       <div className="ticket-show">
         <div className="ticket-container">
           <Link to='/main/ticket-search/' className="delete-container">
-          <div onClick = {this.delete}>
-            <span className="delete-text">Delete</span>
-          </div>
+            <div onClick={this.delete}>
+              <span onClick={this.delete} className="delete-text">Delete</span>
+            </div>
           </Link>
+
           <p className="ticket-address">
             <span>Address : </span>
-            {this.props.data.tickets.address}
+            {this.props.location.state.ticketInfo.address}
           </p>
           <p className="ticket-priority">
             <span>Priority: </span>
-            {this.props.data.tickets.priority}
+            {this.props.location.state.ticketInfo.priority}
           </p>
           <p className="ticket-type">
             <span>Type: </span>
-            {this.props.data.tickets.type}
+            {this.props.location.state.ticketInfo.type}
           </p>
           <p className="ticket-status">
             <span>Status: </span>
-            {this.props.data.tickets.status}
+            {this.props.location.state.ticketInfo.status}
           </p>
           <p className="ticket-description">
             <span>Description: </span>
-            {this.props.data.tickets.description}
+            {this.props.location.state.ticketInfo.description}
           </p>
           <p className="id">
             <span>ID: </span>
-            {String(this.props.data.tickets._id).slice(19,24)}
+            {String(this.props.location.state.ticketInfo._id).slice(19, 24)}
           </p>
-          <form  onSubmit={this.onUpdate}className='ticket-input-status'>
-          <input placeholder='update status' name='status'></input>
-          <div className = 'submit-button'>
-          <input type='submit' value ='submit'/>
+          <form onSubmit={this.onUpdate} className='ticket-input-status'>
+            <input placeholder='update status' name='status'></input>
+            <div className='submit-button'>
+              <input type='submit' value='submit' />
 
-          </div>
+            </div>
           </form>
+
         </div>
+
       </div>
     );
   }
