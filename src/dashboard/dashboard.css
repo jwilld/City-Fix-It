@@ -38,11 +38,6 @@
     transition: 1s;
 }
 
-/* .dashboard-link:hover{
-    transition: .5s;
-    color: rgba(45, 48, 57, 0.126);
-} */
-
 .dash-header:hover{
     transition: .5s;
     color: rgba(45, 48, 57, 0.126);
