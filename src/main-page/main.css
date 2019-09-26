@@ -1,45 +1,58 @@
 .main-grid {
+  height: 100vh;
+  width: 100vw;
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: repeat(2,.5fr) 5fr 3fr;
+  background-color: rgb(242,242,242);
+}
+.ticket-search-container{
+  grid-row: 4;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
 }
 
-.dashboard {
+.ticket-show-container{
+  grid-row:3;
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  align-content: center;
+}
+
+.dashboard-container {
+  grid-row: 2;
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-container{
   grid-row: 1;
+  display: flex;
+  align-items: flex-start;
 }
 
 .main-header {
-  background-color: rgb(45, 48, 57);
-  height: 10vh;
+  /* background-color: rgb(45, 48, 57); */
+  height: 5em;
+  width: 100vw;
   display: flex;
   align-items: center;
-  box-shadow: 0 10px 6px -4px;
-  border-bottom: 2px solid lightgray;
+  box-shadow: 0 5px 6px -4px;
 }
 
 .main-header-text {
   font-size: 4vh;
   color: white;
+  color: black;
   font-weight: bold;
   padding-left: 10vh;
   text-shadow:.1vh .2vh .1vh lightgray,
-
    0.5vh 0.8vh 0.6vh rgba(16, 16, 16, 0.4),
     0.6vh 0.9vh 0.8vh rgba(16, 16, 16, 0.4);
 }
 
-.main-content {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: 1fr 5fr 1fr;
-}
-
-
-
-.dashboard {
-  grid-row: 1;
-}
 .create-form{
   grid-row: 2;
   grid-column: 2/4;

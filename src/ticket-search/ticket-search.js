@@ -44,7 +44,6 @@ class TicketSearch extends Component {
             }
           })}
         </div>
-        <Route path="/main/ticket-search/:id"component={TicketShow} />
       </div>
     );
   }

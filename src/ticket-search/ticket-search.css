@@ -1,21 +1,10 @@
-.ticket-search {
-  display: grid;
-  grid-template-rows: 1fr .4fr .2fr  .3fr  .2fr;
-  grid-template-columns: repeat(3, 1fr);
-  
-}
-.ticket-show{
-    grid-row: 1;
-    grid-column: 1/5;
-}
+
 .search-container {
-  grid-column: 2;
-  grid-row:3;
   text-align: center;
 }
 
 .search-box {
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .ticket-item {
@@ -51,9 +40,9 @@
   grid-column: 4;
 }
 .ticket-scroll {
-  grid-row:4;
-  grid-column: 1/5;
-  height: 15em;
+  /* grid-row:4;
+  grid-column: 1/5; */
+  height: 11em;
   overflow: hidden;
   overflow-y: scroll;
 
@@ -62,7 +51,7 @@
 }
 
 .display-list{
-    height: 10vh;
+    height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;

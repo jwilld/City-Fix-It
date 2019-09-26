@@ -7,7 +7,7 @@ class Landing extends Component {
     return (
       <div className='landing-container'>
         <div className="title">
-          <Link to="/main/" className="link">
+          <Link to="/main/" className="landing-link">
             <h1>City Fix-It</h1>
           </Link>
           <p>
