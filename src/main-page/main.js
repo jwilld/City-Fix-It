@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router'
 import "./main.css";
 import Dashboard from "../dashboard/dashboard";
 import CreateTicket from "../create-ticket/Create-Ticket"
