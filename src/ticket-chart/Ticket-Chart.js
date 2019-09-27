@@ -33,7 +33,6 @@ class TicketChart extends Component {
       );
       this.setState({ urgentLength: urgentTickets.length });
       this.setState({ routineLength: routineTickets.length });
-      console.log(this.state);
     });
   };
 
@@ -50,7 +49,7 @@ class TicketChart extends Component {
         <div className='description-overview'>
           <h1>Overview</h1>
           <p>
-            Tickets submitted in this area by chart.
+            Submitted tickets by type.
           </p>
         </div>
         <div className='chart-container'>

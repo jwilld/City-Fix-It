@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './dashboard.css'
 import {Link} from 'react-router-dom'
+import { connect } from 'react-redux'
 
 
 class Dashboard extends Component {
@@ -13,10 +14,14 @@ class Dashboard extends Component {
             <Link className="dashboard-link" to="/main/">
             <ul className='dash-link'>Overview</ul>
             </Link>
+            { this.props.data.isAdmin ?
               <Link className = 'dash-link' to='/main/ticket-search'>
             <ul>View Tickets</ul>
 
               </Link>
+              :
+              null
+            }
               <Link className = 'dash-link' to='/main/create/'>
 
             <ul>New Ticket</ul>
@@ -29,4 +34,9 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard
+const mapStateToProps = state => {
+  return {
+    data: state
+  };
+};
+export default connect(mapStateToProps)(Dashboard)

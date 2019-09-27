@@ -21,6 +21,7 @@ class TicketShow extends Component {
   render() {
     return (
       <div className="ticket-show">
+        
         <div className="ticket-container">
           <Link to='/main/ticket-search/' className="delete-container">
             <div onClick={this.delete}>

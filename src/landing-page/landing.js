@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./landing.css";
 import UserType from '../user-type/UserType'
 
@@ -9,9 +8,9 @@ class Landing extends Component {
       <div className='landing-container'>
         <div className="title">
           <div>
-          <Link to="/main/" className="landing-link">
+          <div  className="landing-link">
             <h1>City Fix-It</h1>
-          </Link>
+          </div>
           </div>
           <div className='description'>
           <p>

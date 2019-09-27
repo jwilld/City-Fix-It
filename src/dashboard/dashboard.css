@@ -1,7 +1,6 @@
 
 .dash-grid{
     display: grid;
-
 }
 
 
@@ -24,7 +23,8 @@ ul{
 }
 .dash-menu-items{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns:1fr 1fr auto;
+    grid-template-rows: 1fr;
     grid-gap: 30px;
 }
 .dash-link{

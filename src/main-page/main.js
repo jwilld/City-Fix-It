@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux'
+import { Redirect } from 'react-router'
 import "./main.css";
 import Dashboard from "../dashboard/dashboard";
 import CreateTicket from "../create-ticket/Create-Ticket"
@@ -18,14 +20,22 @@ class Main extends Component {
           <header className="main-header-text">City Fix-It</header>
           </Link>
         </div>
-
         </div>
+        {this.props.data.isAdmin ? 
         <div className='ticket-search-container'>
           <Route path ='/main/ticket-search' component={TicketSearch}/>
         </div>
+          :
+          null
+          }
+          {this.props.data.isAdmin ?
         <div className='ticket-show-container'>
           <Route path="/main/ticket-search/:id"component={TicketShow} />
         </div>
+        :
+        null
+          }
+  
         <div className='dashboard-container'>
           <Dashboard path ='/main/' component={Main} />
         </div>
@@ -40,4 +50,9 @@ class Main extends Component {
   }
 }
 
-export default Main;
+const mapStateToProps = state => {
+  return {
+    data: state
+  };
+};
+export default connect(mapStateToProps)(Main)
