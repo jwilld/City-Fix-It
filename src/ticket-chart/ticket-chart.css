@@ -3,17 +3,46 @@
     grid-template-rows: repeat(3,1fr);
     text-align: center;
 }
-.the-chart{
-    grid-row: 3;
-    display: flex;
-}
-.app-description{
-    grid-row: 2;
-    text-align: center;
+
+
+  
+
+.description-overview{
+    color: white;
+    opacity: .7;
 }
 
+
 .chart-container{
+    grid-row: 2;
     display: flex;
     justify-content: center;
-    /* width: 50em; */
+}
+
+.rv-xy-plot__grid-lines__line {
+    opacity: .5;
+    stroke: rgba(255, 255, 255, 0.452);
+    stroke-width: .5;
+  }
+
+  .rv-xy-plot__axis__tick__text{
+      fill: white;
+      font-size: 20px;
+
+  }
+
+  .rv-xy-plot__axis__line{
+      opacity: .5;
+      fill: white;
+  }
+
+.rv-xy-plot__axis__ticks{
+    opacity: .5;
+    fill: white;
+}
+
+.rv-xy-plot__series--label-text{
+    opacity: .5;
+    fill: white;
+
 }

@@ -23,6 +23,8 @@ class CreateTicket extends Component {
     let keys = Object.keys(this.state)
     keys.forEach(key => (newTicket[key] = form.get(key)))
     this.props.dispatch(create_ticket(newTicket))
+    document.getElementById('create-ticket-form').reset()
+
 
   }
 
@@ -43,9 +45,9 @@ class CreateTicket extends Component {
     ))
     return (
       <div className="create-form" onSubmit={this.createTicket}>
-        <form className="form">
+        <form id='create-ticket-form' className="create-form">
         <div className='form-label'>
-          <label >Create Ticket</label>
+          <label >New Ticket</label>
         </div>
         <div className= 'form-inputs'>
           {createForm}

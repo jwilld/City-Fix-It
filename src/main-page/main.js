@@ -27,7 +27,9 @@ class Main extends Component {
         <div className='dashboard-container'>
           <Dashboard path ='/main/' component={Main} />
         </div>
-          <Route path ='/main/create' component={CreateTicket}/> 
+        <div className='create-container'>
+          <Route exact path ='/main/create' component={CreateTicket}/> 
+        </div>
           <Route exact path='/main' component={TicketChart}/>
       </div>
     );

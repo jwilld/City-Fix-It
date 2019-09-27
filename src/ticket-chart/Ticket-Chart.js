@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import '../../node_modules/react-vis/dist/style.css';
 import './ticket-chart.css'
-import { XAxis, YAxis,XYPlot, VerticalBarSeries,LabelSeries } from "react-vis";
+import { XAxis, YAxis, XYPlot, VerticalBarSeries, LabelSeries, HorizontalGridLines } from "react-vis";
 
 class TicketChart extends Component {
+  
   constructor() {
     super();
     this.state = {
@@ -28,45 +30,46 @@ class TicketChart extends Component {
   };
 
   render() {
-    const chartWidth = 300;
-    const chartHeight = 210;
+    const chartWidth = 500;
+    const chartHeight = 250;
     const chartDomain = [0, chartHeight];
     let myData = [
-        {x:'Urgent' ,y:this.state.urgentLength},
-        {x:'Routine' ,y:this.state.routineLength}
+      { x: 'Urgent', y: this.state.urgentLength },
+      { x: 'Routine', y: this.state.routineLength }
 
     ]
     return (
       <div className="chart">
-        <div className='description-header'>  
-          <h1>City Fix-It</h1>
-        </div>
-          <div className='app-description'>
+        <div className='description-overview'>
+          <h1>Overview</h1>
           <p>
-           This website allows you to report repair tickets to the local government.
-           Simply fill out the location and other details of the issue along with a description.
+            Tickets submitted in this area by chart.
           </p>
-          </div>
-          <div className= 'chart-container'>
-        <XYPlot className='the-chart' xType="ordinal" width={chartWidth} height={chartHeight} yDomain={chartDomain} color="green">
-            <XAxis/>
-            <YAxis/>
+        </div>
+        <div className='chart-container'>
+          <XYPlot className='the-chart' xType="ordinal" width={chartWidth} height={chartHeight} opacity={.7} yDomain={chartDomain} color="green" margin={{ left: 50 }}>
+            <XAxis />
+            <YAxis />
             <VerticalBarSeries
-            data = {myData}
+
+              data={myData}
             />
 
-            <LabelSeries
-            data = {myData.map( obj => {
-                return { ...obj,label: obj.y.toString() }
-            })}
-            labelAnchorX = "middle"
-            labelAnchorY = "text-after-edge"
+
+            <LabelSeries className='label-series'
+              data={myData.map(obj => {
+                return { ...obj, label: obj.y.toString() }
+              })}
+              labelAnchorX="middle"
+              labelAnchorY="text-after-edge"
+
+            />
+            <HorizontalGridLines className='grid-lines' />
             
-            />
 
-        </XYPlot> 
+          </XYPlot>
 
-          </div>
+        </div>
       </div>
     );
   }
