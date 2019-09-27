@@ -11,8 +11,6 @@
 
 .create-form {
   opacity: .7;
-  padding: 2em;
-  /* box-shadow: 0 5px 20px -4px white; */
   height: 23em;
   width: 20em;
   display: grid;
@@ -71,4 +69,12 @@
 
 .textarea-box {
   height: 5em;
+}
+
+@media only screen and (max-width:760px){
+  .input{
+    width: 15em;
+    
+  }
+
 }
