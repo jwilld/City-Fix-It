@@ -8,10 +8,11 @@
   border: none;
   color: rgb(98, 177, 176);
   border-radius: 5px;
+  border: 2px solid grey;
 }
 .search-box:focus{
   outline: 0;
-  border: 4px solid rgba(98, 177, 176, 0.735);
+  border: 2px solid rgba(98, 177, 176, 0.735);
 }
 
 .search-box::placeholder{
