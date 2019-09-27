@@ -6,7 +6,7 @@ import TicketSearch from "../ticket-search/ticket-search"
 import TicketChart from "../ticket-chart/Ticket-Chart"
 import TicketShow from "../ticket-show/TicketShow";
 
-import {Route} from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 
 class Main extends Component {
   render() {
@@ -14,7 +14,9 @@ class Main extends Component {
       <div className="main-grid">
         <div className='header-container'>
         <div className="main-header">
+          <Link  className='landing-redirect' to ='/'>
           <header className="main-header-text">City Fix-It</header>
+          </Link>
         </div>
 
         </div>
