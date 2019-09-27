@@ -6,12 +6,12 @@
   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 
+
 .ticket-search-container{
   grid-row: 4;
   grid-column: 1;
   display: flex;
-  align-items: center;
-  width: 100%;
+  align-items: center; 
   
 }
 
@@ -29,6 +29,7 @@
   justify-content: center;
   align-items: flex-start;
 }
+
 
 .header-container{
   grid-row: 1;
@@ -51,7 +52,12 @@
   font-weight: bold;
   padding-left: 10vh; 
 }
+@media only screen and (max-width:760px){
+  .main-header-text{
+    font-size: 1.8em;
 
+  }
+}
 .create-container{
   grid-row: 3/5;
   grid-column:1;

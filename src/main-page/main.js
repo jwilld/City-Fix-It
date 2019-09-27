@@ -30,7 +30,9 @@ class Main extends Component {
         <div className='create-container'>
           <Route exact path ='/main/create' component={CreateTicket}/> 
         </div>
+        <div className='ticket-chart-container'>
           <Route exact path='/main' component={TicketChart}/>
+        </div>
       </div>
     );
   }

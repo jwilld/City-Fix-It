@@ -4,6 +4,7 @@
     grid-template-rows: 1fr,5fr;
 }
 
+
 .dash-menu{
     opacity: .7;
     color: rgb(255, 255, 255);
@@ -11,6 +12,12 @@
     font-weight: bold;
     text-align: center;
     padding: 1em;
+}
+@media only screen and (max-width:760px){
+    .dash-menu{
+        font-size: .5em;
+    }
+
 }
 .dash-menu-items{
     display: flex;

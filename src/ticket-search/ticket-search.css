@@ -27,6 +27,14 @@
   grid-template-columns: repeat(6, 1fr);
   text-align: center;
   transition: 1s;
+  font-size: 1em;
+}
+@media only screen and (max-width:760px){
+  .ticket-item{
+    font-size: .1em;
+    
+  }
+
 }
 .ticket-item:hover{
   background-color:rgba(98, 177, 176, 0.715);
@@ -63,6 +71,7 @@
   font-weight: bold;
   color: white;
 }
+
 
 
 .display-list{
