@@ -9,6 +9,7 @@
   color: rgb(98, 177, 176);
   border-radius: 5px;
   border: 2px solid grey;
+  text-align: center;
 }
 .search-box:focus{
   outline: 0;

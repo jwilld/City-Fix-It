@@ -74,6 +74,7 @@ p span{
     border: 2px solid grey ;
     border-radius: 6px;
     font-size: 20px;
+    text-align: center;
 }
 
 .ticket-input-box::placeholder{
