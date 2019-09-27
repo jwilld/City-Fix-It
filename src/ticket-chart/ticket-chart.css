@@ -11,13 +11,13 @@
     width: 100vw;
 }
 
-.test-container {
+.chart-container {
     grid-row: 2;
     display: flex;
     justify-content: center;
 }
 
-.chart-container {
+.chart-wrapper {
     width: 70vw;
 }
 

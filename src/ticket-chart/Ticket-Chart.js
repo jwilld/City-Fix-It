@@ -54,8 +54,8 @@ class TicketChart extends Component {
             Tickets submitted in this area by chart.
           </p>
         </div>
-        <div className='test-container'>
-          <div className='chart-container'>
+        <div className='chart-container'>
+          <div className='chart-wrapper'>
             <FlexibleXYPlot className='the-chart' xType="ordinal" height={chartHeight} opacity={.7} yDomain={chartDomain} color="green" margin={{ left: 50 }}>
               <XAxis />
               <YAxis />

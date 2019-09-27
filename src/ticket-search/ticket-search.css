@@ -29,17 +29,10 @@
   transition: 1s;
   font-size: 1em;
 }
-@media only screen and (max-width:760px){
-  .ticket-item{
-    font-size: .1em;
-    
-  }
-
-}
 .ticket-item:hover{
   background-color:rgba(98, 177, 176, 0.715);
   transition: 1s;
-
+  
 }
 
 .edit-link {
@@ -75,12 +68,24 @@
 
 
 .display-list{
-    height: 4em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ::-webkit-input-placeholder {
-    text-align: center;
- }
+  text-align: center;
+}
+
+
+@media only screen and (max-width:760px){
+  .ticket-item{
+    font-size: .1em;
+    
+  }
+  .ticket-scroll{
+    height: 6.9em;
+  }
+
+}

@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import { connect } from 'react-redux'
 import { get_tickets, set_tickets } from '../actions/actions'
 import "./ticket-search.css";
-import { Route} from "react-router-dom";
-
-import TicketShow from "../ticket-show/TicketShow";
 import TicketList from "../ticket-list/Ticket-List.js";
 
 class TicketSearch extends Component {
