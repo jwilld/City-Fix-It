@@ -19,7 +19,7 @@ class Dashboard extends Component {
               </Link>
               <Link className = 'dash-link' to='/main/create/'>
 
-            <ul>Create Ticket</ul>
+            <ul>New Ticket</ul>
               </Link>
             </div>
           </div>

@@ -1,7 +1,7 @@
 
 .dash-grid{
     display: grid;
-    grid-template-rows: 1fr,5fr;
+
 }
 
 
@@ -19,9 +19,13 @@
     }
 
 }
+ul{
+    padding-inline-start: 0;
+}
 .dash-menu-items{
-    display: flex;
-    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
 }
 .dash-link{
     transition: 1s;
@@ -29,6 +33,7 @@
     color: white;
     font-size: 1.5em;
 }
+
 
 .dash-link:hover{
     transition: .5s;
