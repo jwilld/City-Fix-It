@@ -87,5 +87,8 @@
   .ticket-scroll{
     height: 6.9em;
   }
-
+  
+  .search-box{
+    font-size: 1em;
+  }
 }
