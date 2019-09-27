@@ -133,4 +133,17 @@ export const create_ticket = ticket => {
         .catch(e => dispatch(new_ticket_error()))
     }
 }
+
+export const admin = () => {
+    return{
+        type:'IS_ADMIN'
+    }
+}
+    
+
+export const user = () => {
+    return{
+        type:'IS_USER'
+    }
+}
     

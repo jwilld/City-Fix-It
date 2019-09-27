@@ -11,6 +11,8 @@ const initialState = {
     isNewTicket: false,
     isNewTicketSuccess: false,
     isNewTicketError: false,
+    isAdmin: false,
+    isUser:false,
     tickets: [
         {
             address: "Loading ... ",
@@ -72,6 +74,18 @@ const asyncReducer = (state = initialState, action) => {
                 isNewTicketSuccess: false,
                 isNewTicketError: true  
             } )
+        }
+        case "IS_ADMIN":{
+            return Object.assign({}, state, {
+                isAdmin:true,
+                isUser: false
+            })
+        }
+        case "IS_USER":{
+            return Object.assign({}, state, {
+                isAdmin:false,
+                isUser: true
+            })
         }
         default: 
             return state;

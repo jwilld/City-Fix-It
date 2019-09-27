@@ -38,7 +38,6 @@ class TicketChart extends Component {
   };
 
   render() {
-    const chartWidth = 500;
     const chartHeight = 250;
     const chartDomain = [0, chartHeight];
     let myData = [
