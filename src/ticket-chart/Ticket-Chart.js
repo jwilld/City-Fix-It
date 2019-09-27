@@ -2,10 +2,18 @@ import React, { Component } from "react";
 import Axios from "axios";
 import '../../node_modules/react-vis/dist/style.css';
 import './ticket-chart.css'
-import { XAxis, YAxis, XYPlot, VerticalBarSeries, LabelSeries, HorizontalGridLines } from "react-vis";
+import {
+  XAxis, YAxis,
+  XYPlot, VerticalBarSeries,
+  LabelSeries, HorizontalGridLines,
+  makeWidthFlexible
+}
+  from "react-vis";
+
+const FlexibleXYPlot = makeWidthFlexible(XYPlot);
 
 class TicketChart extends Component {
-  
+
   constructor() {
     super();
     this.state = {
@@ -46,29 +54,26 @@ class TicketChart extends Component {
             Tickets submitted in this area by chart.
           </p>
         </div>
-        <div className='chart-container'>
-          <XYPlot className='the-chart' xType="ordinal" width={chartWidth} height={chartHeight} opacity={.7} yDomain={chartDomain} color="green" margin={{ left: 50 }}>
-            <XAxis />
-            <YAxis />
-            <VerticalBarSeries
+        <div className='test-container'>
+          <div className='chart-container'>
+            <FlexibleXYPlot className='the-chart' xType="ordinal" height={chartHeight} opacity={.7} yDomain={chartDomain} color="green" margin={{ left: 50 }}>
+              <XAxis />
+              <YAxis />
+              <VerticalBarSeries
 
-              data={myData}
-            />
+                data={myData}
+              />
+              <LabelSeries className='label-series'
+                data={myData.map(obj => {
+                  return { ...obj, label: obj.y.toString() }
+                })}
+                labelAnchorX="middle"
+                labelAnchorY="text-after-edge"
 
-
-            <LabelSeries className='label-series'
-              data={myData.map(obj => {
-                return { ...obj, label: obj.y.toString() }
-              })}
-              labelAnchorX="middle"
-              labelAnchorY="text-after-edge"
-
-            />
-            <HorizontalGridLines className='grid-lines' />
-            
-
-          </XYPlot>
-
+              />
+              <HorizontalGridLines className='grid-lines' />
+            </FlexibleXYPlot>
+          </div>
         </div>
       </div>
     );
