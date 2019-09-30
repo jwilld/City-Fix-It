@@ -12,6 +12,14 @@ The idea is simple: Anyone can submit a ticket with a simple form reporting the 
 
 A representative from the government can see all of the tickets, update their status, and forward the issue to the appropriate government department. 
 
+# Site Guide
+<br/><br/>
+<img align="center" src="https://i.imgur.com/nPhOBqY.png" width="100%" height="80%">
+<br/><br/>
+<br/><br/>
+<img align="center" src="https://i.imgur.com/Xa3oSge.png" width="100%" height="80%">
+<br/><br/>
+
 # Deployed App:
 
 https://city-fix-it.surge.sh/
