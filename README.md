@@ -29,14 +29,21 @@ On the website, there are options to:
   - HTML
   - CSS 
   - ReactJS
+  - Redux
+  - Redux-Thunk
+  - Axios
+  - React-Vis
   
 - For server
   - Express
   
-- Database
-  - MongoDB
+- Deployed Database 
+  - MongoDB Atlas
   - Mongoose
-  - Mongo Atlas
+
+- Local Database
+  - MongoDB 
+  - Mongoose
   
 - Back-end deployment
   - Heroku
@@ -55,23 +62,21 @@ To set up the app locally on your own system:
       - react-dom
       - react-router
       - react-router-dom
-      - react-scripts
-      
+      - redux
+      - redux-thunk
+      - react-vis
     3) Start up your server and navigate to the indicated port number in your browser
     
    
 
 # Planned features:
--  Google maps integration 
 -  User authentication 
--  Photo uploading
--  Mobile device geolocation
 -  Citizen-Government communication features
 -  Internal government communication features
 
 
 # Contributors
-- David Hutchings -- [David's GitHub Profile](https://git.generalassemb.ly/DJHUTCHINGS)
-- Jamie Miller -- [Jamie's GitHub Profile](https://git.generalassemb.ly/jamiemiller8)
-- Jerry Davidson -- [Jerry's GitHub Profile](https://git.generalassemb.ly/Jwilld)
+- David Hutchings -- [David's GitHub Profile](https://github.com/DJHUTCHINGS)
+- Jamie Miller -- [Jamie's GitHub Profile](https://github.com/jamiemiller8)
+- Jerry Davidson -- [Jerry's GitHub Profile](https://github.com/jwilld)
 
