@@ -7,6 +7,7 @@ import TicketList from "../ticket-list/Ticket-List.js";
 class TicketSearch extends Component {
 
   componentDidMount = () => {
+    // dispatches the ' get_tickets' function from the Redux actions.
     this.props.dispatch(get_tickets())
   };
   
@@ -30,6 +31,8 @@ class TicketSearch extends Component {
         <div className="ticket-scroll">
           {this.props.data.tickets.map((ticket, key) => {
             if (ticket.address !== undefined) {
+              //  searches the ticket by id. The id comes from the last 5 characters
+              // of the model from the API 
               if (String(ticket._id).toLowerCase().includes(this.props.data.currentTickets)
               ||
               (ticket.priority.toLowerCase().includes(this.props.data.currentTickets)

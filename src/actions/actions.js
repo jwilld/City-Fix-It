@@ -28,7 +28,14 @@ export const delete_error = () => {
 
 
 export const delete_ticket = ticket => {
+    // delete_start gets called so the reducer knows that
+    // the user clicked delete ticket
     store.dispatch(delete_start());
+    // redux thunk is used for asynchronous functions since 
+    // redux is synchronous 
+    // dispatch gets used to start the axios request
+    // when the request finishes, it updates the state of 
+    // the application
     return function (dispatch, getState) {
         let url = 'https://city-fix-it.herokuapp.com/tickets/delete/'
         return axios.delete(url + ticket)

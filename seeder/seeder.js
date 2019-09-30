@@ -4,12 +4,13 @@ const url = 'https://city-fix-it.herokuapp.com/tickets/create'
 
 
 
+
 for(i=0; i < 50 ; i++){
     let priorityChoice
     if(i%2 === 0){
-        priorityChoice = 'Urgent'
+        priorityChoice = 'Routines'
         axios.post(url,{
-            address:`5${i} Grey Rd, Washington DC 20008`,
+            address:`5${i} Orange Ct, Washington DC 20003`,
             type: 'Damage',
             description:' Big crack in the road',
             priority: priorityChoice
@@ -20,7 +21,7 @@ for(i=0; i < 50 ; i++){
     }else{
         priorityChoice = 'Routine'
         axios.post(url, {
-            address:`4${i} Red Ln, Washington DC 20005`,
+            address:`4${i} Pink Way, Washington DC 20001`,
             type: 'Repair',
             description:' There is a massive leek',
             priority: priorityChoice

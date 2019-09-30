@@ -37,11 +37,6 @@
   font-size: 13px;
 }
   
-  .title h1:hover{
-    color: rgb(156, 152, 152);
-    transition: 1s;
-  
-  }
   
   .title p {
     font-size: 1.5em;
@@ -52,7 +47,7 @@
 
   @media only screen and (max-width:760px) {
     .landing-link{
-      font-size: 1.4em;
+      font-size: 1.2em;
     }
     .description{
         font-size: 8px;

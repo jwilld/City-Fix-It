@@ -1,0 +1,31 @@
+.user-type-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1em;
+    font-weight: bold;
+    color: white;
+    opacity: .7;
+    font-size: 1.2em;
+}
+
+.user-button{
+    transition: 1s;
+}
+
+.admin-button{
+    transition: 1s;
+}
+
+.user-button:hover{
+    color: grey;
+    transition:1s;
+}
+.admin-button:hover{
+    color: grey;
+    transition: 1s
+}
+
+.link-tag{
+    color: white;
+    text-decoration: none;
+}
