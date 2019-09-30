@@ -15,8 +15,6 @@ A representative from the government can see all of the tickets, update their st
 # Site Guide
 <br/><br/>
 <img align="center" src="https://i.imgur.com/nPhOBqY.png" width="100%" height="80%">
-<br/><br/>
-<br/><br/>
 <img align="center" src="https://i.imgur.com/Xa3oSge.png" width="100%" height="80%">
 <br/><br/>
 
